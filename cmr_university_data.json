@@ -1,0 +1,120 @@
+{
+  "university_name": "CMR University",
+  "mission": "To nurture creative thinkers who will drive positive global change",
+  "curriculum": [
+    {
+      "type": "Programme Curriculum",
+      "description": "Mastery and application of knowledge and skills specific to the discipline. Techniques and practices to make learning more meaningful, engaging and more impactful"
+    },
+    {
+      "type": "Common Core",
+      "description": "All undergraduate and masters level students familiarize themselves with relevant skills, exposure, knowledge and practices to thrive in the professional world today and in the future."
+    },
+    {
+      "type": "LEAP",
+      "description": "Learning Engagement Advanced Programme. Students learn to support each other and build communities, develop deeper understanding of themselves and inculcate consistent reflective practices to improve their social wellbeing into the future."
+    }
+  ],
+  "campuses": [
+    {
+      "name": "HRBR Campus"
+    },
+    {
+      "name": "OMBR Campus"
+    },
+    {
+      "name": "CMRIT",
+      "location": "near ITPL"
+    },
+    {
+      "name": "Lakeside Campus",
+      "location": "North Bengaluru",
+      "details": "60-acre, serene setting, exceptional connectivity, accessible from Bellary Road and near the airport"
+    }
+  ],
+  "rankings": [
+    {
+      "rank": "5 Star",
+      "category": "Overall Rating",
+      "source": "Artificial Intelligence Registration and Certification, U.K."
+    },
+    {
+      "rank": "Emerging University of the Year",
+      "category": "University Award",
+      "source": "ASSOCHAM, New Delhi"
+    },
+    {
+      "rank": "Emerging University of the Year",
+      "category": "University Award",
+      "source": "ASSOCHAM, New Delhi"
+    },
+    {
+      "rank": "#6",
+      "category": "Best State Private Universities & South Zone",
+      "source": "IIRF"
+    }
+  ],
+  "academic_divisions": [
+    "Architecture",
+    "Engineering",
+    "Technology",
+    "Legal Studies",
+    "Management",
+    "Education",
+    "Sciences",
+    "Humanities"
+  ],
+  "programmes_offered": {
+    "undergraduate": "Students can seek admission to undergraduate programmes via the selection process.",
+    "postgraduate": "",
+    "doctoral": ""
+  },
+  "placements": {
+    "recruiters": "200+",
+    "modules": "Pre-Placement modules from first semester focus on employability",
+    "focus": "emphasis on experiential learning, extensive focus on Internships",
+    "training": "Training for competitive examinations \u2013 CAT, GRE, TOEFL, CMAT, Bank PO, and more."
+  },
+  "admissions": {
+    "year": "AY 2025-26",
+    "status": "currently open"
+  },
+  "news": [],
+  "events": [],
+  "testimonials": [],
+  "contact_info": {
+    "admissions_helpline": "93429 00078",
+    "campuses": {
+      "city_campus": {
+        "phone": "080 - 25426977 / 88 / 25426988"
+      },
+      "ombr_campus": {
+        "phone": "080 - 25426955 / 080 / 25426944"
+      },
+      "lakeside_campus": {
+        "phone": "7022007888"
+      },
+      "cmrit": {
+        "phone": "08028524777"
+      }
+    },
+    "information_centre": {
+      "andhra_pradesh_telangana": {
+        "phone": [
+          "89519 93444",
+          "63669 82945",
+          "89519 93446",
+          "63669 82947"
+        ]
+      }
+    },
+    "career_enquiries": {
+      "talent_team": {
+        "phone": [
+          "9108542888",
+          "9513444999"
+        ]
+      }
+    }
+  }
+}
