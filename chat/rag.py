@@ -17,6 +17,7 @@ class RAGEngine:
         self._ready = False
         self._docs: List[Dict[str, str]] = []
         self._retriever: BM25Retriever | None = None
+        self._data: Dict | None = None
 
         # Prefer Groq if GROQ_API_KEY present; model can be overridden via OPENAI_MODEL
         self._groq_api_key = os.getenv("GROQ_API_KEY")
@@ -36,6 +37,8 @@ class RAGEngine:
     def _load_documents(self) -> None:
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)
+        # keep raw tree for deterministic lookups (e.g., rankings)
+        self._data = data
 
         chunks: List[Dict[str, str]] = []
 
@@ -78,16 +81,20 @@ class RAGEngine:
         self._docs = split_chunks or chunks
 
     def _build_retriever(self) -> None:
-        # BM25Retriever works directly on strings, no embeddings required
-        texts = [d["text"] for d in self._docs]
-        metadata = [{"id": d["id"], "source": d["source"]} for d in self._docs]
-        # LangChain BM25Retriever expects list of Documents; construct minimally
-        from langchain_core.documents import Document
+        try:
+            # BM25Retriever works directly on strings, no embeddings required
+            texts = [d["text"] for d in self._docs]
+            metadata = [{"id": d["id"], "source": d["source"]} for d in self._docs]
+            # LangChain BM25Retriever expects list of Documents; construct minimally
+            from langchain_core.documents import Document
 
-        docs = [Document(page_content=t, metadata=m) for t, m in zip(texts, metadata)]
-        retriever = BM25Retriever.from_documents(docs)
-        retriever.k = 6
-        self._retriever = retriever
+            docs = [Document(page_content=t, metadata=m) for t, m in zip(texts, metadata)]
+            retriever = BM25Retriever.from_documents(docs)
+            retriever.k = 6
+            self._retriever = retriever
+        except Exception:
+            # If BM25 cannot be constructed (e.g., missing dependency), fall back to simple keyword ranking
+            self._retriever = None
 
     def _init_llm(self) -> None:
         if self._groq_api_key:
@@ -102,14 +109,35 @@ class RAGEngine:
 
     def _retrieve(self, query: str, k: int = 6) -> List[Tuple[float, Dict[str, str]]]:
         self.ensure_ready()
-        assert self._retriever is not None
-        docs = self._retriever.get_relevant_documents(query)
-        # BM25Retriever doesn't expose scores by default; treat order as score rank
         scored: List[Tuple[float, Dict[str, str]]] = []
-        for rank, d in enumerate(docs[:k]):
-            score = max(0.0, 1.0 - (rank * 0.1))
-            scored.append((score, {"id": d.metadata.get("id", ""), "text": d.page_content, "source": d.metadata.get("source", "")}))
-        return scored
+        try:
+            if self._retriever is not None:
+                docs = self._retriever.get_relevant_documents(query)
+                # BM25Retriever doesn't expose scores by default; treat order as score rank
+                for rank, d in enumerate(docs[:k]):
+                    score = max(0.0, 1.0 - (rank * 0.1))
+                    scored.append((score, {"id": d.metadata.get("id", ""), "text": d.page_content, "source": d.metadata.get("source", "")}))
+                if scored:
+                    return scored
+        except Exception:
+            # fall through to keyword fallback
+            pass
+
+        # Keyword fallback over self._docs when BM25 is not available
+        q = (query or "").lower()
+        if not q:
+            return []
+        keywords = [w for w in q.replace("?", " ").replace(",", " ").split() if len(w) >= 2]
+        def score_text(t: str) -> int:
+            tl = t.lower()
+            return sum(tl.count(w) for w in keywords)
+        # rank documents by simple keyword frequency
+        ranked = sorted(self._docs, key=lambda d: score_text(d["text"]), reverse=True)[:k]
+        out: List[Tuple[float, Dict[str, str]]] = []
+        for rank, d in enumerate(ranked):
+            sc = max(0.0, 1.0 - rank * 0.1)
+            out.append((sc, {"id": d.get("id", ""), "text": d.get("text", ""), "source": d.get("source", "")}))
+        return out
 
     def answer(self, question: str) -> Dict:
         # Handle common greetings and casual conversation
@@ -128,6 +156,32 @@ class RAGEngine:
                 "answer": "You're welcome! Feel free to ask me anything else about CMR University.",
                 "sources": [],
             }
+
+        # Deterministic handler for ranking-related queries
+        if any(w in question_lower for w in ["rank", "ranking", "rankings", "rated", "nirf", "iirf"]):
+            try:
+                self.ensure_ready()
+                rankings = []
+                if isinstance(self._data, dict):
+                    rankings = self._data.get("rankings", []) or []
+                if isinstance(rankings, list) and len(rankings) > 0:
+                    # Build a concise summary
+                    lines = []
+                    for item in rankings[:4]:
+                        if not isinstance(item, dict):
+                            continue
+                        r = str(item.get("rank", "")).strip()
+                        cat = str(item.get("category", "")).strip()
+                        src = str(item.get("source", "")).strip()
+                        bullet = " • ".join([p for p in [r, cat, src] if p])
+                        if bullet:
+                            lines.append(f"- {bullet}")
+                    if lines:
+                        answer = "Here are CMR University's notable rankings and ratings:\n" + "\n".join(lines)
+                        return {"answer": answer, "sources": [{"id": "rankings", "preview": "CMR University rankings from campus data"}]}
+            except Exception:
+                # fall through to retrieval/LLM path
+                pass
         
         hits = self._retrieve(question, 6)
         if not hits:
