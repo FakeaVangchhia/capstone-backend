@@ -89,10 +89,11 @@ class ChatSessionListCreate(APIView):
         if user_id:
             qs = qs.filter(user_id=user_id)
         else:
-            # Default: if authenticated, only return that user's sessions
+            # Default: require auth; only return that user's sessions
             user = get_auth_user(request)
-            if user:
-                qs = qs.filter(user_id=str(user.id))
+            if not user:
+                return Response({"message": "Unauthorized"}, status=401)
+            qs = qs.filter(user_id=str(user.id))
         serializer = ChatSessionSerializer(qs, many=True)
         return Response(serializer.data)
 
@@ -161,10 +162,24 @@ class ChatSessionDetail(APIView):
 class MessageCreate(APIView):
     @method_decorator(csrf_exempt)
     def post(self, request):
+        # Authorization: only the owner of a session can post messages to it
+        auth_user = get_auth_user(request)
+
         serializer = MessageSerializer(data=request.data)
         if not serializer.is_valid():
             return Response({"message": "Invalid message data", "issues": serializer.errors}, status=422)
         data = serializer.validated_data
+
+        # Extract session and enforce ownership before creating the message
+        session_info = data.get("session") or {}
+        session_id = session_info.get("id")
+        session = get_object_or_404(ChatSession, id=session_id)
+
+        # If the session is associated with a user, require matching auth
+        if session.user_id:
+            if not auth_user or session.user_id != str(auth_user.id):
+                return Response({"message": "Forbidden"}, status=403)
+
         message = serializer.save()
 
         # bump session updated_at

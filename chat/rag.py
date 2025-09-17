@@ -21,7 +21,7 @@ class RAGEngine:
 
         # Prefer Groq if GROQ_API_KEY present; model can be overridden via OPENAI_MODEL
         self._groq_api_key = os.getenv("GROQ_API_KEY")
-        self._openai_model = os.getenv("OPENAI_MODEL", "llama-3.1-8b-instant")
+        self._openai_model = os.getenv("GROQ_MODEL", "llama-3.1-8b-instant")
 
         # LLM client (lazy init). We'll use langchain_groq if key is present
         self._llm = None
@@ -150,6 +150,22 @@ class RAGEngine:
                 "sources": [],
             }
         
+        # Handle identity / capability / help questions BEFORE consulting RAG data
+        identity_triggers = [
+            'who are you', 'what are you', 'who r u', 'your name', 'about you',
+            'tell me about yourself', 'are you a bot', 'what can you do', 'help',
+            'what do you do', 'who is this', 'who is that', 'introduce yourself'
+        ]
+        if any(trigger in question_lower for trigger in identity_triggers):
+            return {
+                "answer": (
+                    "I'm CollegeGPT — a friendly AI assistant for CMR University. "
+                    "I can answer questions about programmes, campuses, admissions, rankings, placements, and contact details. "
+                    "Ask me something like: admissions status, campus locations, or notable rankings."
+                ),
+                "sources": [],
+            }
+
         # Handle thank you messages
         if any(word in question_lower for word in ['thank', 'thanks', 'thx']):
             return {
@@ -242,7 +258,7 @@ class RAGEngine:
             top_snippet = snippets[0].replace("- ", "")
             if len(top_snippet) > 200:
                 top_snippet = top_snippet[:200] + "..."
-            answer = f"Based on CMR University data: {top_snippet}\n\nFor more details, please ask a more specific question."
+            answer = f"{top_snippet}\n\nFor more details, please ask a more specific question."
         else:
             answer = "I found some information but couldn't extract a clear answer. Please try rephrasing your question."
         
