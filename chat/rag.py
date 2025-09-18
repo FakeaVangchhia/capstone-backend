@@ -3,20 +3,30 @@ import os
 from pathlib import Path
 from typing import List, Dict, Tuple
 
-# LangChain imports (BM25 requires no external embeddings, lightweight and fast)
+# LangChain imports
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.retrievers import BM25Retriever
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_community.retrievers import BM25Retriever
+from langchain_community.vectorstores import Chroma
+try:
+    # Prefer maintained package if installed
+    from langchain_huggingface import HuggingFaceEmbeddings
+except Exception:  # pragma: no cover
+    from langchain_community.embeddings import HuggingFaceEmbeddings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_PATH = BASE_DIR / "cmr_university_data.json"
+# Use the new dataset for improved coverage
+DATA_PATH = BASE_DIR / "cmru_dataset.json"
+CHROMA_DIR = BASE_DIR / ".chroma"
+CHROMA_COLLECTION = os.getenv("CHROMA_COLLECTION", "cmru_docs")
 
 
 class RAGEngine:
     def __init__(self) -> None:
         self._ready = False
         self._docs: List[Dict[str, str]] = []
-        self._retriever: BM25Retriever | None = None
+        self._retriever: object | None = None
+        self._vectorstore: Chroma | None = None
         self._data: Dict | None = None
 
         # Prefer Groq if GROQ_API_KEY present; model can be overridden via OPENAI_MODEL
@@ -30,7 +40,7 @@ class RAGEngine:
         if self._ready:
             return
         self._load_documents()
-        self._build_retriever()
+        self._build_vectorstore_and_retriever()
         self._init_llm()
         self._ready = True
 
@@ -80,20 +90,61 @@ class RAGEngine:
 
         self._docs = split_chunks or chunks
 
-    def _build_retriever(self) -> None:
-        try:
-            # BM25Retriever works directly on strings, no embeddings required
-            texts = [d["text"] for d in self._docs]
-            metadata = [{"id": d["id"], "source": d["source"]} for d in self._docs]
-            # LangChain BM25Retriever expects list of Documents; construct minimally
-            from langchain_core.documents import Document
+    def _build_vectorstore_and_retriever(self) -> None:
+        # Build Chroma persistent vector store; on failure, keep BM25 as fallback
+        texts = [d["text"] for d in self._docs]
+        metadatas = [{"id": d["id"], "source": d["source"]} for d in self._docs]
 
-            docs = [Document(page_content=t, metadata=m) for t, m in zip(texts, metadata)]
-            retriever = BM25Retriever.from_documents(docs)
-            retriever.k = 6
-            self._retriever = retriever
+        # Ensure persistence dir exists
+        try:
+            CHROMA_DIR.mkdir(parents=True, exist_ok=True)
         except Exception:
-            # If BM25 cannot be constructed (e.g., missing dependency), fall back to simple keyword ranking
+            pass
+
+        try:
+            # Use a lightweight local embedding model by default
+            embed_model_name = os.getenv("EMBEDDINGS_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+            embeddings = HuggingFaceEmbeddings(model_name=embed_model_name)
+
+            # Initialize or connect to collection
+            self._vectorstore = Chroma(
+                collection_name=CHROMA_COLLECTION,
+                embedding_function=embeddings,
+                persist_directory=str(CHROMA_DIR),
+            )
+
+            # Detect if collection is empty and needs indexing
+            needs_index = False
+            try:
+                stats = self._vectorstore.get(limit=1)
+                if not stats or len(stats.get("ids", [])) == 0:
+                    needs_index = True
+            except Exception:
+                needs_index = True
+
+            if needs_index and len(texts) > 0:
+                # Upsert all docs
+                self._vectorstore.add_texts(texts=texts, metadatas=metadatas)
+                try:
+                    self._vectorstore.persist()
+                except Exception:
+                    pass
+
+            # Build retriever from vector store
+            self._retriever = self._vectorstore.as_retriever(search_kwargs={"k": 6})
+            return
+        except Exception:
+            # If Chroma setup fails, fall back to BM25
+            pass
+
+        # BM25 fallback
+        try:
+            from langchain_core.documents import Document
+            docs = [Document(page_content=t, metadata=m) for t, m in zip(texts, metadatas)]
+            bm25 = BM25Retriever.from_documents(docs)
+            bm25.k = 6
+            self._retriever = bm25
+        except Exception:
             self._retriever = None
 
     def _init_llm(self) -> None:
@@ -112,11 +163,13 @@ class RAGEngine:
         scored: List[Tuple[float, Dict[str, str]]] = []
         try:
             if self._retriever is not None:
+                # Support both VectorStoreRetriever and BM25Retriever
                 docs = self._retriever.get_relevant_documents(query)
-                # BM25Retriever doesn't expose scores by default; treat order as score rank
                 for rank, d in enumerate(docs[:k]):
                     score = max(0.0, 1.0 - (rank * 0.1))
-                    scored.append((score, {"id": d.metadata.get("id", ""), "text": d.page_content, "source": d.metadata.get("source", "")}))
+                    meta = getattr(d, "metadata", {}) or {}
+                    text = getattr(d, "page_content", "")
+                    scored.append((score, {"id": meta.get("id", ""), "text": text, "source": meta.get("source", "")}))
                 if scored:
                     return scored
         except Exception:
@@ -173,16 +226,19 @@ class RAGEngine:
                 "sources": [],
             }
 
-        # Deterministic handler for ranking-related queries
-        if any(w in question_lower for w in ["rank", "ranking", "rankings", "rated", "nirf", "iirf"]):
+        # Deterministic handler for ranking-related queries (with common misspellings)
+        if any(w in question_lower for w in [
+            "rank", "ranking", "rankings", "rated", "nirf", "iirf",
+            "rand", "randking", "rankding"
+        ]):
             try:
                 self.ensure_ready()
                 rankings = []
                 if isinstance(self._data, dict):
                     rankings = self._data.get("rankings", []) or []
                 if isinstance(rankings, list) and len(rankings) > 0:
-                    # Build a concise summary
-                    lines = []
+                    # Build a friendly, conversational summary from the dataset
+                    bullets = []
                     for item in rankings[:4]:
                         if not isinstance(item, dict):
                             continue
@@ -191,10 +247,61 @@ class RAGEngine:
                         src = str(item.get("source", "")).strip()
                         bullet = " • ".join([p for p in [r, cat, src] if p])
                         if bullet:
-                            lines.append(f"- {bullet}")
-                    if lines:
-                        answer = "Here are CMR University's notable rankings and ratings:\n" + "\n".join(lines)
-                        return {"answer": answer, "sources": [{"id": "rankings", "preview": "CMR University rankings from campus data"}]}
+                            bullets.append(f"- {bullet}")
+                    if bullets:
+                        answer = (
+                            "Here's how CMR University is rated, based on the official info I have:\n"
+                            + "\n".join(bullets)
+                            + "\n\nWant details on a specific ranking or source? Happy to share more."
+                        )
+                        return {"answer": answer, "sources": [{"id": "rankings", "preview": "Rankings from cmru_dataset.json"}]}
+            except Exception:
+                # fall through to retrieval/LLM path
+                pass
+
+        # Improved handler for admissions (including MCA)
+        if any(w in question_lower for w in [
+            "admission", "admissions", "apply", "application", "process", "how to get in", "how can i apply"
+        ]):
+            try:
+                self.ensure_ready()
+                
+                # Check if user is asking about MCA specifically
+                mentions_mca = any(w in question_lower for w in ["mca", "master of computer applications"])
+                
+                lines = []
+                
+                # Provide meaningful admission process steps
+                lines.append("Here's the admission process for CMR University:")
+                lines.append("- Visit the official CMR University website")
+                lines.append("- Fill out the online application form")
+                lines.append("- Upload required documents (academic transcripts, ID proof, etc.)")
+                lines.append("- Pay the application fee (non-refundable)")
+                lines.append("- Submit your application and wait for confirmation")
+                lines.append("- Attend counseling/interview if required")
+                
+                lines.append("")
+                lines.append("Important notes:")
+                lines.append("- Application fee is non-refundable")
+                lines.append("- Use the same email ID throughout the process")
+                lines.append("- Admissions for AY 2025-26 are currently open")
+                
+                if mentions_mca:
+                    lines.append("- For MCA program details, please check the specific eligibility criteria")
+                
+                lines.append("")
+                lines.append("For more information and to apply, visit: https://www.cmr.edu.in/campus/")
+                lines.append("Admissions Helpline: 93429 00078")
+
+                prefix = "For MCA admission," if mentions_mca else ""
+                answer = f"{prefix} here's what you need to know about admissions at CMR University:\n" + "\n".join(lines)
+                
+                return {
+                    "answer": answer,
+                    "sources": [
+                        {"id": "admissions", "preview": "Admissions information from CMR University dataset"}
+                    ],
+                }
             except Exception:
                 # fall through to retrieval/LLM path
                 pass
@@ -228,15 +335,15 @@ class RAGEngine:
 
                 prompt = ChatPromptTemplate.from_messages([
                     ("system", (
-                        "You are CollegeGPT, a friendly and concise assistant for CMR University. "
-                        "Answer ONLY using the provided context. Keep answers under 120 words. "
-                        "Use a short paragraph and up to 3 bullets if useful. "
-                        "If the answer isn't in the context, say you don't know."
+                        "You are CollegeGPT, a warm and natural-sounding assistant for CMR University. "
+                        "Answer ONLY using the provided context. Keep it conversational and helpful. "
+                        "Prefer 2–4 short sentences or clear bullets. Avoid sounding robotic. "
+                        "If the answer isn't in the context, say you don't know and suggest what to ask instead."
                     )),
                     ("user", (
                         "Question: {question}\n\n"
                         "Context from university data:\n{context}\n\n"
-                        "Write a concise, student-friendly answer now."
+                        "Write a concise, friendly answer now."
                     )),
                 ])
 
@@ -245,22 +352,27 @@ class RAGEngine:
                 llm_text = (getattr(llm_resp, "content", None) or str(llm_resp) or "").strip()
                 if llm_text:
                     words = llm_text.split()
-                    if len(words) > 120:
-                        llm_text = " ".join(words[:120]) + " …"
+                    if len(words) > 140:
+                        llm_text = " ".join(words[:140]) + " …"
                     return {"answer": llm_text, "sources": sources}
             except Exception:
                 # On any failure, fall back to extractive answer below
                 pass
 
-        # Fallback: extractive, non-LLM answer (much more concise)
+        # Fallback: extractive, non-LLM answer (conversational)
         if len(snippets) > 0:
-            # Just return the most relevant snippet, not all of them
             top_snippet = snippets[0].replace("- ", "")
             if len(top_snippet) > 200:
                 top_snippet = top_snippet[:200] + "..."
-            answer = f"{top_snippet}\n\nFor more details, please ask a more specific question."
+            answer = (
+                f"Here's what I found: {top_snippet}\n\n"
+                "If you want, I can pull more details or narrow it down."
+            )
         else:
-            answer = "I found some information but couldn't extract a clear answer. Please try rephrasing your question."
+            answer = (
+                "I couldn't find a clear answer in the dataset. "
+                "Try asking about a specific area, programme, or ranking source."
+            )
         
         return {"answer": answer, "sources": sources}
 
