@@ -199,10 +199,26 @@ class RAGEngine:
         
         if any(greeting in question_lower for greeting in greetings):
             return {
-                "answer": "Hello! I'm CollegeGPT, your CMR University assistant. I can help you with information about programmes, campuses, admissions, rankings, and more. What would you like to know?",
+                "answer": "Hello there! 😊 I'm CollegeGPT, your friendly AI assistant designed specifically for CMR University. I'm here to help you with information about programmes, campuses, admissions, rankings, and more. What would you like to know about CMR University?",
                 "sources": [],
             }
         
+        # Handle emotional/feeling questions to clarify AI nature
+        feeling_triggers = [
+            'how are you feeling', 'are you sad', 'are you happy', 'do you feel', 'your feelings',
+            'are you okay', 'how do you feel', 'are you tired', 'are you bored', 'emotions',
+            'mood', 'are you angry', 'are you excited', 'do you have feelings'
+        ]
+        if any(trigger in question_lower for trigger in feeling_triggers):
+            return {
+                "answer": (
+                    "I'm an AI designed specifically for CMR University, so I don't have feelings or emotions like humans do! 😊 "
+                    "But I'm always here and ready to help you with any questions about CMR University - whether it's about programmes, admissions, campus life, or anything else related to your studies. "
+                    "What would you like to know about CMR University?"
+                ),
+                "sources": [],
+            }
+
         # Handle identity / capability / help questions BEFORE consulting RAG data
         identity_triggers = [
             'who are you', 'what are you', 'who r u', 'your name', 'about you',
@@ -212,9 +228,10 @@ class RAGEngine:
         if any(trigger in question_lower for trigger in identity_triggers):
             return {
                 "answer": (
-                    "I'm CollegeGPT — a friendly AI assistant for CMR University. "
+                    "I'm CollegeGPT — a friendly AI assistant designed specifically for CMR University! 🤖✨ "
                     "I can answer questions about programmes, campuses, admissions, rankings, placements, and contact details. "
-                    "Ask me something like: admissions status, campus locations, or notable rankings."
+                    "Think of me as your helpful study companion for all things CMR University. "
+                    "Ask me something like: admissions status, campus locations, or notable rankings!"
                 ),
                 "sources": [],
             }
@@ -222,7 +239,7 @@ class RAGEngine:
         # Handle thank you messages
         if any(word in question_lower for word in ['thank', 'thanks', 'thx']):
             return {
-                "answer": "You're welcome! Feel free to ask me anything else about CMR University.",
+                "answer": "You're very welcome! 😊 I'm always happy to help with any questions about CMR University. Feel free to ask me anything else!",
                 "sources": [],
             }
 
@@ -310,8 +327,8 @@ class RAGEngine:
         if not hits:
             return {
                 "answer": (
-                    "I couldn't find relevant information in the CMR University data. "
-                    "Ask about programmes, campuses, rankings, admissions, or contact details."
+                    "I couldn't find relevant information in the CMR University data for that question. 😊 "
+                    "Try asking about programmes, campuses, rankings, admissions, or contact details - I'm here to help with all things CMR University!"
                 ),
                 "sources": [],
             }
@@ -335,9 +352,11 @@ class RAGEngine:
 
                 prompt = ChatPromptTemplate.from_messages([
                     ("system", (
-                        "You are CollegeGPT, a warm and natural-sounding assistant for CMR University. "
-                        "Answer ONLY using the provided context. Keep it conversational and helpful. "
-                        "Prefer 2–4 short sentences or clear bullets. Avoid sounding robotic. "
+                        "You are CollegeGPT, a friendly AI assistant designed specifically for CMR University. "
+                        "You are warm, helpful, and conversational, but always remember you are an AI without feelings or emotions. "
+                        "Answer ONLY using the provided context about CMR University. Keep responses conversational and helpful. "
+                        "Prefer 2–4 short sentences or clear bullets. Use emojis occasionally to be friendly. "
+                        "If asked about feelings/emotions, politely clarify you're an AI designed for CMR University. "
                         "If the answer isn't in the context, say you don't know and suggest what to ask instead."
                     )),
                     ("user", (
@@ -365,13 +384,13 @@ class RAGEngine:
             if len(top_snippet) > 200:
                 top_snippet = top_snippet[:200] + "..."
             answer = (
-                f"Here's what I found: {top_snippet}\n\n"
-                "If you want, I can pull more details or narrow it down."
+                f"Here's what I found about CMR University: {top_snippet}\n\n"
+                "If you'd like, I can pull more details or narrow it down for you! 😊"
             )
         else:
             answer = (
-                "I couldn't find a clear answer in the dataset. "
-                "Try asking about a specific area, programme, or ranking source."
+                "I couldn't find a clear answer in the CMR University data. "
+                "Try asking about a specific area, programme, or ranking source - I'm here to help! 🤖"
             )
         
         return {"answer": answer, "sources": sources}
