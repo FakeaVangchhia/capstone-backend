@@ -1,7 +1,11 @@
 from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse, HttpResponse
+from django.views import View
+from django.views.decorators.http import require_http_methods
 from .models import ChatSession, Message, AppUser, AuthToken
 from .serializers import (
     ChatSessionSerializer,
@@ -16,6 +20,12 @@ from django.views.decorators.csrf import csrf_exempt
 import os
 import time
 from django.utils import timezone
+from django.core.files.uploadedfile import UploadedFile
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+import PyPDF2
+import docx
+import os
+from django.conf import settings
 
 
 def get_bearer_token(request) -> str | None:
@@ -28,14 +38,60 @@ def get_bearer_token(request) -> str | None:
     return None
 
 
+def extract_text_from_file(uploaded_file) -> str:
+    """Extract text from uploaded file based on file type"""
+    filename = getattr(uploaded_file, "name", "").lower()
+    content_bytes = uploaded_file.read()
+    
+    try:
+        if filename.endswith('.txt'):
+            # Plain text file
+            return content_bytes.decode("utf-8", errors="ignore")
+        
+        elif filename.endswith('.pdf'):
+            # PDF file
+            import io
+            pdf_file = io.BytesIO(content_bytes)
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
+            text = ""
+            for page in pdf_reader.pages:
+                text += page.extract_text() + "\n"
+            return text
+        
+        elif filename.endswith(('.docx', '.doc')):
+            # Word document
+            import io
+            doc_file = io.BytesIO(content_bytes)
+            doc = docx.Document(doc_file)
+            text = ""
+            for paragraph in doc.paragraphs:
+                text += paragraph.text + "\n"
+            return text
+        
+        else:
+            # Try to decode as text for other file types
+            return content_bytes.decode("utf-8", errors="ignore")
+            
+    except Exception as e:
+        print(f"Error extracting text from {filename}: {e}")
+        # Fallback to trying UTF-8 decode
+        try:
+            return content_bytes.decode("utf-8", errors="ignore")
+        except:
+            return ""
+
+
 def get_auth_user(request) -> AppUser | None:
     token = get_bearer_token(request)
     if not token:
         return None
     try:
+        # Validate that token looks like a UUID before querying
+        import uuid
+        uuid.UUID(token)  # This will raise ValueError if not a valid UUID
         t = AuthToken.objects.select_related("user").get(key=token)
         return t.user
-    except AuthToken.DoesNotExist:
+    except (AuthToken.DoesNotExist, ValueError):
         return None
 
 
@@ -80,6 +136,232 @@ class LogoutView(APIView):
         if token:
             AuthToken.objects.filter(key=token).delete()
         return Response({"success": True})
+
+
+class AdminUploadView(View):
+    @method_decorator(csrf_exempt)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+    
+    def options(self, request):
+        # Handle CORS preflight request
+        response = JsonResponse({})
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, Accept-Encoding"
+        response["Access-Control-Allow-Credentials"] = "true"
+        response["Access-Control-Max-Age"] = "86400"
+        print("OPTIONS request received - sending CORS headers")
+        return response
+    
+    def post(self, request):
+        # Check authentication using the same function
+        user = get_auth_user(request)
+        if not user or not getattr(user, "is_admin", False):
+            return JsonResponse({"message": "Forbidden"}, status=403)
+
+        print(f"=== UPLOAD DEBUG ===")
+        print(f"Content-Type: {request.content_type}")
+        print(f"Content-Length: {request.META.get('CONTENT_LENGTH', 'Not set')}")
+        print(f"FILES keys: {list(request.FILES.keys())}")
+        print(f"POST keys: {list(request.POST.keys())}")
+        print(f"Method: {request.method}")
+        print(f"HTTP_CONTENT_TYPE: {request.META.get('HTTP_CONTENT_TYPE', 'Not set')}")
+        print(f"REQUEST_METHOD: {request.META.get('REQUEST_METHOD', 'Not set')}")
+        
+        # Check if body exists and preview it
+        try:
+            body_size = len(request.body) if hasattr(request, 'body') else 0
+            print(f"Body size: {body_size}")
+            if body_size > 0:
+                body_preview = request.body[:100]
+                print(f"Body preview: {body_preview}")
+        except Exception as e:
+            print(f"Error reading body: {e}")
+        
+        # Try to get the uploaded file
+        upload = None
+        if request.FILES:
+            upload = request.FILES.get("file")
+            if not upload:
+                # Get the first file regardless of key name
+                upload = next(iter(request.FILES.values()))
+        
+        print(f"Upload object: {upload}")
+        print(f"=== END DEBUG ===")
+        
+        if not upload:
+            return JsonResponse({
+                "message": "file is required",
+                "received_fields": list(request.FILES.keys()),
+                "debug_info": {
+                    "content_type": request.content_type,
+                    "content_length": request.META.get('CONTENT_LENGTH'),
+                    "method": request.method
+                }
+            }, status=422)
+        
+        # Process the uploaded file
+        try:
+            filename = getattr(upload, "name", "uploaded")
+            source = f"upload:{filename}"
+            content_bytes = upload.read()
+            
+            try:
+                text = content_bytes.decode("utf-8", errors="ignore")
+            except Exception:
+                text = ""
+            
+            if not text:
+                return JsonResponse({"message": "Unsupported or empty file"}, status=400)
+            
+            # chunk and upsert
+            splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+            chunks = splitter.split_text(text)
+            added = rag.upsert_texts(chunks, source=source)
+            
+            response = JsonResponse({"success": True, "chunks": added})
+            response["Access-Control-Allow-Origin"] = "*"
+            response["Access-Control-Allow-Credentials"] = "true"
+            return response
+            
+        except Exception as e:
+            return JsonResponse({"message": f"Failed to process file: {str(e)}"}, status=400)
+
+
+def test_upload_page(request):
+    """Serve the test upload HTML page"""
+    from django.http import FileResponse
+    import os
+    from django.conf import settings
+    
+    html_path = os.path.join(settings.BASE_DIR, 'test_upload.html')
+    if os.path.exists(html_path):
+        return FileResponse(open(html_path, 'rb'), content_type='text/html')
+    else:
+        return HttpResponse("Test upload page not found", status=404)
+
+
+@csrf_exempt
+def admin_upload_simple(request):
+    """Simple function-based view for file upload"""
+    
+    # Handle OPTIONS request for CORS
+    if request.method == 'OPTIONS':
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept"
+        response["Access-Control-Allow-Credentials"] = "true"
+        response["Access-Control-Max-Age"] = "86400"
+        print("Function view: OPTIONS request handled")
+        return response
+    
+    if request.method != 'POST':
+        return JsonResponse({"message": "Method not allowed"}, status=405)
+    
+    # Check authentication (flexible for testing)
+    user = get_auth_user(request)
+    if user and not getattr(user, "is_admin", False):
+        # If user is logged in but not admin, deny access
+        response = JsonResponse({"message": "Forbidden - Admin access required"}, status=403)
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
+    elif not user:
+        # If no user is logged in, allow upload for testing (you can change this later)
+        print("No authentication provided - allowing upload for testing")
+    
+    print(f"=== SIMPLE UPLOAD DEBUG ===")
+    print(f"Content-Type: {request.content_type}")
+    print(f"Content-Length: {request.META.get('CONTENT_LENGTH', 'Not set')}")
+    print(f"FILES keys: {list(request.FILES.keys())}")
+    print(f"POST keys: {list(request.POST.keys())}")
+    print(f"Method: {request.method}")
+    print(f"Headers: {dict(request.headers)}")
+    
+    # Check if body exists
+    try:
+        body_size = len(request.body) if hasattr(request, 'body') else 0
+        print(f"Body size: {body_size}")
+        if body_size > 0 and body_size < 1000:  # Only preview small bodies
+            print(f"Body preview: {request.body[:200]}")
+    except Exception as e:
+        print(f"Error reading body: {e}")
+    
+    # Try to get the uploaded file
+    upload = request.FILES.get("file")
+    if not upload and request.FILES:
+        upload = next(iter(request.FILES.values()))
+    
+    print(f"Upload object: {upload}")
+    print(f"=== END SIMPLE DEBUG ===")
+    
+    if not upload:
+        response = JsonResponse({
+            "message": "file is required",
+            "received_fields": list(request.FILES.keys()),
+        }, status=422)
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
+    
+    # Process the file
+    try:
+        filename = getattr(upload, "name", "uploaded")
+        source = f"upload:{filename}"
+        
+        # Save the uploaded file to uploads directory
+        upload_dir = os.path.join(settings.BASE_DIR, "uploads")
+        os.makedirs(upload_dir, exist_ok=True)
+        
+        # Create unique filename to avoid conflicts
+        import time
+        timestamp = int(time.time())
+        safe_filename = f"{timestamp}_{filename}"
+        file_path = os.path.join(upload_dir, safe_filename)
+        
+        # Save the file
+        with open(file_path, 'wb') as f:
+            for chunk in upload.chunks():
+                f.write(chunk)
+        
+        print(f"File saved to: {file_path}")
+        
+        # Extract text based on file type
+        upload.seek(0)  # Reset file pointer
+        text = extract_text_from_file(upload)
+        
+        if not text or len(text.strip()) == 0:
+            response = JsonResponse({
+                "message": f"Could not extract text from {filename}. Supported formats: TXT, PDF, DOCX",
+                "file_saved": file_path
+            }, status=400)
+            response["Access-Control-Allow-Origin"] = "*"
+            return response
+        
+        print(f"Extracted text length: {len(text)} characters")
+        
+        # chunk and upsert
+        splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+        chunks = splitter.split_text(text)
+        added = rag.upsert_texts(chunks, source=source)
+        
+        response = JsonResponse({
+            "success": True, 
+            "chunks": added,
+            "filename": filename,
+            "text_length": len(text),
+            "file_saved": file_path
+        })
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Credentials"] = "true"
+        return response
+        
+    except Exception as e:
+        response = JsonResponse({"message": f"Failed to process file: {str(e)}"}, status=400)
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
+
+
 
 
 class ChatSessionListCreate(APIView):

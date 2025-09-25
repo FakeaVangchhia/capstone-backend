@@ -44,6 +44,28 @@ class RAGEngine:
         self._init_llm()
         self._ready = True
 
+    # Public method to upsert arbitrary text chunks (e.g., newly uploaded docs)
+    def upsert_texts(self, texts: List[str], source: str = "uploaded") -> int:
+        if not texts:
+            return 0
+        # Ensure vector store exists
+        if self._vectorstore is None or self._retriever is None:
+            # initialize with empty docs
+            self._docs = []
+            self._build_vectorstore_and_retriever()
+        try:
+            metadatas = [{"id": f"{source}:{i}", "source": source} for i, _ in enumerate(texts)]
+            self._vectorstore.add_texts(texts=texts, metadatas=metadatas)
+            try:
+                self._vectorstore.persist()
+            except Exception:
+                pass
+            # refresh retriever
+            self._retriever = self._vectorstore.as_retriever(search_kwargs={"k": 6})
+            return len(texts)
+        except Exception:
+            return 0
+
     def _load_documents(self) -> None:
         with open(DATA_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)

@@ -8,6 +8,9 @@ from .views import (
     MeView,
     LogoutView,
     ChatSessionDetail,
+    AdminUploadView,
+    admin_upload_simple,
+    test_upload_page,
 )
 
 urlpatterns = [
@@ -21,4 +24,9 @@ urlpatterns = [
     path("chat-sessions/<uuid:session_id>", ChatSessionDetail.as_view()),
     path("chat-sessions/<uuid:session_id>/messages", SessionMessagesList.as_view()),
     path("messages", MessageCreate.as_view()),
+    # Admin
+    path("admin/upload", AdminUploadView.as_view()),
+    path("admin/upload-simple", admin_upload_simple),
+    # Test page
+    path("test-upload", test_upload_page),
 ]

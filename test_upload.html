@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test File Upload</title>
+</head>
+
+<body>
+    <h1>Test File Upload</h1>
+
+    <div style="margin-bottom: 20px; padding: 10px; background: #f0f0f0;">
+        <label for="tokenInput">Auth Token (optional for testing):</label><br>
+        <input type="text" id="tokenInput" placeholder="Enter your auth token here" style="width: 400px;">
+        <button type="button" onclick="setToken()">Set Token</button>
+        <button type="button" onclick="clearToken()">Clear Token</button>
+        <div id="tokenStatus" style="margin-top: 5px; font-size: 12px;"></div>
+    </div>
+
+    <form id="uploadForm">
+        <input type="file" id="fileInput" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function setToken() {
+            const token = document.getElementById('tokenInput').value;
+            if (token) {
+                localStorage.setItem('auth_token', token);
+                updateTokenStatus();
+            }
+        }
+
+        function clearToken() {
+            localStorage.removeItem('auth_token');
+            document.getElementById('tokenInput').value = '';
+            updateTokenStatus();
+        }
+
+        function updateTokenStatus() {
+            const token = localStorage.getItem('auth_token');
+            const status = document.getElementById('tokenStatus');
+            if (token) {
+                status.textContent = `Token set: ${token.substring(0, 10)}...`;
+                status.style.color = 'green';
+            } else {
+                status.textContent = 'No token set';
+                status.style.color = 'red';
+            }
+        }
+
+        // Update status on page load
+        updateTokenStatus();
+
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            // Get token from localStorage (you'll need to set this)
+            const token = localStorage.getItem('auth_token');
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/api/admin/upload-simple', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                const result = await response.text();
+                document.getElementById('result').innerHTML = `
+                    <h3>Response (${response.status}):</h3>
+                    <pre>${result}</pre>
+                `;
+            } catch (error) {
+                document.getElementById('result').innerHTML = `
+                    <h3>Error:</h3>
+                    <pre>${error.message}</pre>
+                `;
+            }
+        });
+    </script>
+</body>
+
+</html>

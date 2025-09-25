@@ -26,7 +26,7 @@ class MessageSerializer(serializers.ModelSerializer):
 class AppUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = AppUser
-        fields = ["id", "username", "created_at"]
+        fields = ["id", "username", "is_admin", "created_at"]
         read_only_fields = ["id", "created_at"]
 
 
