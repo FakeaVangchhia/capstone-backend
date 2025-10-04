@@ -15,6 +15,7 @@ from .serializers import (
     LoginSerializer,
 )
 from .rag import rag
+import json
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 import os
@@ -514,3 +515,98 @@ class MessageCreate(APIView):
             "created_at": message.created_at,
         }
         return Response(out)
+
+
+class StudyBuddyView(APIView):
+    """Quick study tips and motivation endpoint"""
+    
+    def get(self, request):
+        tip_type = request.query_params.get("type", "tip")
+        
+        if tip_type == "motivation":
+            message = rag.get_study_motivation()
+            response_type = "motivation"
+        else:
+            message = rag.get_study_tip_of_day()
+            response_type = "study_tip"
+            
+        return Response({
+            "type": response_type,
+            "message": message,
+            "timestamp": timezone.now().isoformat()
+        })
+
+
+class StudyResourcesView(APIView):
+    """Provide study resources and academic support info"""
+    
+    def get(self, request):
+        resources = {
+            "study_techniques": [
+                {
+                    "name": "Pomodoro Technique",
+                    "description": "25 minutes focused study + 5 minute break",
+                    "best_for": "Maintaining focus and avoiding burnout"
+                },
+                {
+                    "name": "Active Recall",
+                    "description": "Test yourself instead of just re-reading",
+                    "best_for": "Better retention and understanding"
+                },
+                {
+                    "name": "Spaced Repetition",
+                    "description": "Review material at increasing intervals",
+                    "best_for": "Long-term memory retention"
+                },
+                {
+                    "name": "Feynman Technique",
+                    "description": "Explain concepts in simple terms",
+                    "best_for": "Deep understanding of complex topics"
+                }
+            ],
+            "campus_study_spots": [
+                {
+                    "location": "Main Library",
+                    "best_for": "Quiet individual study",
+                    "features": ["Silent zones", "Research resources", "Group study rooms"]
+                },
+                {
+                    "location": "Hostel Common Areas",
+                    "best_for": "Group study sessions",
+                    "features": ["High-speed Wi-Fi", "Collaborative environment", "Peer support"]
+                },
+                {
+                    "location": "Lakeside Campus Outdoor Areas",
+                    "best_for": "Fresh air study breaks",
+                    "features": ["Natural environment", "Stress relief", "Creative thinking"]
+                }
+            ],
+            "academic_support": [
+                {
+                    "resource": "Faculty Office Hours",
+                    "description": "One-on-one help from professors",
+                    "how_to_access": "Check with individual faculty for their office hours"
+                },
+                {
+                    "resource": "Study Groups",
+                    "description": "Collaborative learning with peers",
+                    "how_to_access": "Form groups with classmates or join existing ones"
+                },
+                {
+                    "resource": "LEAP Program",
+                    "description": "Learning Engagement & Advancement Programme",
+                    "how_to_access": "Contact Office of Student Affairs"
+                }
+            ],
+            "exam_preparation": [
+                "Start preparation at least 2 weeks before exams",
+                "Create a study schedule and stick to it",
+                "Practice past papers and sample questions",
+                "Form study groups for discussion and clarification",
+                "Take regular breaks to avoid burnout",
+                "Get adequate sleep - don't pull all-nighters",
+                "Stay hydrated and eat healthy during exam period"
+            ]
+        }
+        
+        return Response(resources)

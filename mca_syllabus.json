@@ -1,0 +1,1892 @@
+{
+    "title": "Master of Computer Applications (MCA) Scheme of Teaching and Evaluation (STE)",
+    "batch": "2023-25",
+    "sections": [
+        {
+            "title": "Vision and Mission",
+            "content": []
+        },
+        {
+            "title": "Vision and Mission",
+            "content": []
+        },
+        {
+            "title": "Programme Educational Objectives",
+            "content": []
+        },
+        {
+            "title": "Programme Outcomes",
+            "content": []
+        },
+        {
+            "title": "Program Specific Outcomes",
+            "content": [
+                "Category-wise and Semester-wise Credits Distribution"
+            ]
+        },
+        {
+            "title": "Credit Structure",
+            "content": []
+        },
+        {
+            "title": "Programme Structure",
+            "content": []
+        },
+        {
+            "title": "Legend",
+            "content": []
+        },
+        {
+            "title": "I Semester",
+            "content": []
+        },
+        {
+            "title": "II Semester",
+            "content": []
+        },
+        {
+            "title": "Interdisciplinary Courses",
+            "content": []
+        },
+        {
+            "title": "Skill Enhancement Courses",
+            "content": []
+        },
+        {
+            "title": "Graduate Requirement",
+            "content": []
+        },
+        {
+            "title": "First Semester Syllabus",
+            "content": []
+        },
+        {
+            "title": "Second Semester Syllabus",
+            "content": []
+        },
+        {
+            "title": "Glossary",
+            "content": [
+                "--- PAGE 2 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "Vision and Mission",
+            "content": [
+                {
+                    "title": "Vision",
+                    "description": [
+                        "To nurture creative thinkers who will drive positive global change"
+                    ]
+                },
+                {
+                    "title": "Mission",
+                    "description": [
+                        "To offer multi, inter and cross-disciplinary modular programmes with technology-enabled",
+                        "teaching-learning processes.",
+                        "To focus on research-led teaching and learning in an innovative and interdisciplinary learning",
+                        "environment; to create critical thinkers.",
+                        "To create leaders for a knowledge based economy, with ethical demands of a society base.",
+                        "To engage talented intellectual capital with strong faculty diversity in knowledge and experience.",
+                        "To ensure transformation of learning into positive behaviour of students."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Vision and Mission",
+            "content": [
+                {
+                    "title": "Vision",
+                    "description": [
+                        "To provide professional education integrated with globally relevant technology."
+                    ]
+                },
+                {
+                    "title": "Mission",
+                    "description": [
+                        "To motivate students to pursue a quality-driven lifelong learning and continuing education by",
+                        "providing an educational experience, well grounded in mathematical and scientific principles as",
+                        "well as fundamental concepts and theories of computer science.",
+                        "To adapt academic activities to meet the ever-changing needs of society and industry.",
+                        "To recognize and encourage excellence in academics and research.",
+                        "--- PAGE 3 ---",
+                        "STE 2023-25 School of Science Studies",
+                        "Master of Computer Applications",
+                        "Programme Educational Objectives (PEOs)",
+                        "in the IT field, which measures up to industry standards.",
+                        "best software practices used in industry.",
+                        "institutions/Academic Research centres."
+                    ]
+                }
+            ],
+            "objectives_outcomes": [
+                "PEO1: Graduates will be equipped with the prequalification for professionals heading for a smart career",
+                "PEO2: Graduates will demonstrate the knowledge to analyze, design and code software applications.",
+                "PEO3: Graduates will be competent with the ability to understand the concepts of logic development,",
+                "PEO4: Graduates will be proficient to gain an opportunity for Higher education in esteemed"
+            ]
+        },
+        {
+            "title": "Programme Outcomes",
+            "content": [
+                "Graduates will be able to:",
+                "and solve problems.",
+                "components or processes that meet the specified needs with appropriate consideration for the public",
+                "health and safety, and the cultural, societal, and environmental considerations.",
+                "and environmental contexts and demonstrate the knowledge of, and need for sustainable development.",
+                "the field of technology.",
+                "diverse teams, and in multidisciplinary settings.",
+                "able to make effective presentations, and give and receive clear instructions.",
+                "science principles and apply these to one\u2019s own work, as a member and leader in a team, to manage",
+                "projects and in multidisciplinary environments.",
+                "PO10: Life-long learning: Recognize the need for, and have the preparation and ability to engage in",
+                "independent and life-long learning in the broadest context of technological change."
+            ],
+            "objectives_outcomes": [
+                "PO1: Knowledge: Apply the knowledge of mathematics and computer science specialization to analyse",
+                "PO2: Problem analysis: Identify, formulate and analyze complex problems and find simple solutions",
+                "PO3: Design and development of solutions: Design solutions for complex problems and design system",
+                "PO4: Modern tool usage: Create, select and apply appropriate techniques, resources and IT tools.",
+                "PO5: Environment and Sustainability: Understand the impact of the professional solutions in societal",
+                "PO6: Ethics: Apply ethical principles and commit to professional ethics and responsibilities and norms in",
+                "PO7: Individual and team work: Function effectively as an individual, and as a member or leader in",
+                "PO8: Communication: Communicate effectively on activities with the society at large, such as, being",
+                "PO9:Project management and finance: Demonstrate knowledge and understanding of the computer"
+            ]
+        },
+        {
+            "title": "Program Specific Outcomes",
+            "content": [
+                "Graduates will be able to:",
+                "fields.",
+                "Organization, Graphics and Multimedia,techniques of Computer Networking, Software Engineering,Web",
+                "Technologies, Data Mining , IOT, Python and Mobile Application Development .",
+                "problems in multidisciplinary streams.",
+                "--- PAGE 4 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ],
+            "objectives_outcomes": [
+                "PSO1: An ability to apply knowledge of Mathematics, Computer Science and Management in practice.",
+                "PSO2: An ability to enhance comprehensive understanding of the theory and its applications in diverse",
+                "PSO3: The program prepares the young professionals for a range of Computer Applications, Computer",
+                "PSO4: An ability to apply the latest technologies in creating innovative solutions for real world"
+            ]
+        },
+        {
+            "title": "Credit Structure",
+            "content": [
+                "I % of",
+                "II III IV Total",
+                "Sl. No Category Total",
+                "Sem Sem Sem Credits",
+                "Sem Credits",
+                "Discipline Specific",
+                "Elective 21 22",
+                "Capstone Project /",
+                "Dissertation 6 6",
+                "Total Credits 21 24 27 24 96 100",
+                "--- PAGE 5 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ],
+            "table": [
+                "1 Core Course (Major) 16 19 15 5",
+                "55 58",
+                "2 5 5 5 6",
+                "3 MOOC- Major - - 4 - 4 4",
+                "4 Multidisciplinary - - 3 -",
+                "3 3",
+                "5 Internships - - - 6",
+                "6 6",
+                "6 - - - 6",
+                "7 Research Publication - - - 1",
+                "1 1"
+            ]
+        },
+        {
+            "title": "Programme Structure",
+            "content": [
+                "--- PAGE 6 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "LEGEND",
+                "UGC",
+                "CC Core Course",
+                "AECC Ability Enhancement Compulsory Course",
+                "SEC Skill Enhancement Course",
+                "GE General Elective",
+                "DSE Discipline Specific Elective",
+                "CMRU",
+                "FC Fundamental Course",
+                "IC Intermediate Course",
+                "AC Advanced Course",
+                "IDE Interdisciplinary Elective",
+                "Common Core Courses",
+                "PS Preparing for Success",
+                "KSC Knowing Self & Community",
+                "CS Contributing to Society",
+                "AECC Ability Enhancement Compulsory Course",
+                "SEC Skill Enhancement Course",
+                "--- PAGE 7 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "COURSE CODE DESCRIPTION:",
+                "aXXXXbccd:",
+                "a - School Code Number",
+                "1 - School of Education (SOE)",
+                "2 - School of Architecture (SOA)",
+                "3 - School of Economics & Commerce (SOEC)",
+                "4 - School of Engineering & Technology (SOET)",
+                "5 - School of Legal Studies (SOLS)",
+                "6 - School of Management (SOM)",
+                "7 - School of Social Sciences & Humanities (SOSSH)",
+                "8 - School of Science Studies (SOSS)",
+                "9 - School of Design (SOD)",
+                "C - Department of Common Core Curriculum (DCCC)",
+                "XXXX - Discipline Code",
+                "b - Level Number",
+                "cc - Course Number",
+                "d - Syllabus Version Number",
+                "--- PAGE 8 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "PROGRAM CORE DISCIPLINE CODE:",
+                "DISCIPLINE CODE",
+                "General Computer Science CSGC",
+                "Programming Languages CSPL",
+                "Artificial Intelligence CSAI",
+                "Data Science CSDS",
+                "Cloud Computing CSCC",
+                "Game Development CSGA",
+                "Visual Effects & Animation VEAA",
+                "Game Art & Design GAAD",
+                "Art & Graphic Study AAGS",
+                "Media Studies MEST",
+                "Sound Engineering SOEN",
+                "Film Making FIMA",
+                "Photography PHGY",
+                "Statistics STAT",
+                "Research RESE",
+                "Mathematics MATH",
+                "Internship INTS",
+                "Capstone CAPS",
+                "Massive Open Online Courses MOOC",
+                "Interdisciplinary Courses IDSS",
+                "--- PAGE 9 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "COMMON CORE DISCIPLINE CODE:",
+                "DISCIPLINE CODE",
+                "Contributing to Society -",
+                "CSAE",
+                "Ability Enhancement Compulsory Course",
+                "Knowing Self & Community -",
+                "Ability Enhancement Compulsory Course - KSAA",
+                "Arts & Philosophy",
+                "Knowing Self & Community -",
+                "Ability Enhancement Compulsory Course - KSAM",
+                "Me, My Country & My World",
+                "Preparing for Success -",
+                "Ability Enhancement Compulsory Course - PSAD",
+                "Design Thinking",
+                "Preparing for Success -",
+                "PSAE",
+                "Ability Enhancement Compulsory Course",
+                "Preparing for Success -",
+                "Ability Enhancement Compulsory Course - PSAL",
+                "Language",
+                "Preparing for Success -",
+                "PSSE",
+                "Skill Enhancement Course",
+                "Preparing for Success -",
+                "Skill Enhancement Course - PSSF",
+                "Foreign Language",
+                "Preparing for Success -",
+                "Skill Enhancement Course - PSSN",
+                "NCC",
+                "CREDIT DISTRIBUTION:",
+                "L-T-P-C :",
+                "L - Lecture credits",
+                "T - Tutorial credits",
+                "P - Practical credits",
+                "C - Credit (Total)",
+                "--- PAGE 10 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "I Semester",
+            "content": [
+                "Sl.",
+                "CMRU Contact Credit",
+                "Course CMRU UGC Distribution",
+                "No. Course School Hours/",
+                "Code Category Sub category",
+                "Week",
+                "category L-T-P-C",
+                "1",
+                "Advanced Data Program",
+                "8CSGC6601 Structures using C Foundation AC SOSS 7 3-0-2-5",
+                "and Lab Core",
+                "2",
+                "Advanced Database Program",
+                "8CSGC6701 Management Foundation IC SOSS 7 3-0-2-5",
+                "Systems and Lab Core",
+                "3",
+                "Foundatio Program 3-0-0-3",
+                "8CSGC5251 Operating System IC S0SS 3",
+                "n Core",
+                "4",
+                "Probability and Program",
+                "Foundation IC SOSS 3 3-0-0-3",
+                "8STAT5041 Statistics Core",
+                "5",
+                "8CSAI6131 Elective 1 : Discipline",
+                "/ Artificial Specific",
+                "8CSGC6711 Intelligence and Elective Discipline",
+                "Lab / Object AC Specific SOSS 7 3-0-2-5",
+                "Oriented Modelling Elective",
+                "and Design and",
+                "Lab",
+                "Total 21",
+                "Common Core (Non Credit) - Graduate Requirement:",
+                "-",
+                "6",
+                "GPSBD1101 Oral and Written CC GRC AECC DCCC",
+                "Communication",
+                "7",
+                "Career CC GRC AECC DCCC",
+                "Preparedness",
+                "Courses:",
+                "--- PAGE 11 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Career Preparedness",
+                "Program -1",
+                "8",
+                "GCSCD1011 Community Service - I CC GRC AECC",
+                "--- PAGE 12 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "II Semester",
+            "content": [
+                "CMRU Credit",
+                "Sl. Contact",
+                "Course CMRU UGC Schoo Distribution",
+                "Course Hours/",
+                "Code Category Sub category l",
+                "No. Week",
+                "category L-T-P-C",
+                "Machine Learning",
+                "1 8CSDS6201 Foundation AC CC SOSS 7 3-0-2-5",
+                "using Python and Lab",
+                "Advanced Java",
+                "2 Programming and Foundation AC SOSS 7 3-0-2-5",
+                "8CSPL6421 CC",
+                "Lab",
+                "Foundation",
+                "Distributed and",
+                "3 8CSGC6321 (INDUSTRY AC CC SOSS 3 3-0-0-3",
+                "Parallel Computing",
+                "EXPERT/PO",
+                "P)",
+                "Foundation",
+                "Advanced Computer",
+                "4 8CSGC6441 (INDUSTRY AC CC SOSS 3 3-0-0-3",
+                "Networks",
+                "FACING",
+                "MODULE)",
+                "Optimization",
+                "5 8CSGC6431 Foundation IC CC SOSS 3 3-0-0-3",
+                "Techniques",
+                "Discipline",
+                "Elective 2: Data Specific",
+                "8CSGC6721 Warehousing & Data Elective",
+                "ELECTIV",
+                "6 / Mining and Lab/ DSE SOSS 7 3-0-2-5",
+                "E",
+                "8CSPL6431 Mobile Application (INDUSTRY",
+                "Development and Lab EXPERT/PO",
+                "P)",
+                "Total 24",
+                "Common Core (Non Credit) - Graduate Requirement:",
+                "-",
+                "Design Thinking CC GRC AECC DCCC",
+                "7 GPSBT1041",
+                "(DTP)",
+                "--- PAGE 13 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Career Preparedness CC GRC AECC DCCC",
+                "Courses:",
+                "8",
+                "Career Preparedness",
+                "Program -2",
+                "GCSCD1011 Community Service - CC GRC AECC 1",
+                "9",
+                "II",
+                "--- PAGE 14 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "III Semester",
+            "content": [
+                "Sl.",
+                "UGC",
+                "Credit",
+                "CMRU Categor Contact",
+                "No. Course CMRU Distribution",
+                "Course subcate y school Hours/",
+                "Code Category",
+                "gory Week",
+                "L-T-P-C",
+                "Foundation",
+                "Full Stack",
+                "1 8CSGC2411 Developmen (INDUSTRY AC CC SOSS 7 3-0-2-5",
+                "t and Lab FACING",
+                "MODULE)",
+                ".NET",
+                "Framework",
+                "2 8CSPL5231 & Foundation AC CC SOSS 7 3-0-2-5",
+                "Application",
+                "s and Lab",
+                "Network Foundation AC CC S0SS",
+                "Information",
+                "3 (ONLINE) 3 3-0-0-3",
+                "Security and",
+                "8CSGC5271",
+                "Cyber Laws",
+                "Software Foundation",
+                "Program",
+                "Project",
+                "4 8CSGC6241 IC SOSS 3 3-0-0-3",
+                "Managemen",
+                "Core",
+                "t",
+                "Research",
+                "Multidisciplin",
+                "5 8RESE6012 Methodolo MDC MDC SOSS 3 2-0-0-2",
+                "ary",
+                "gy and IPR",
+                "Elective 3:",
+                "Data Foundation",
+                "8CSDS6151",
+                "Visualization",
+                "6 / and Lab (INDUSTRY AC ELECTIVE SOSS 7 3-0-2-5",
+                "/Internet of EXPERT/PO",
+                "8CSAI6081",
+                "Things and P)",
+                "Lab",
+                "--- PAGE 15 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "7 XXXX MOOC Foundation - 4-0-0-4",
+                "Credits 27",
+                "Common Core (Non Credit) - Graduate Requirement:",
+                "Career CC GRC AECC DCCC",
+                "Preparedne",
+                "ss Courses:",
+                "Career",
+                "Preparednes",
+                "8 GPSDL1051 s Program -3 -",
+                "(Strategies",
+                "for",
+                "Self-manage",
+                "ment",
+                "(SSM))",
+                "--- PAGE 16 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "IV Semester",
+            "content": [
+                "Sl.",
+                "UGC Credit",
+                "Catego Contact Distributi",
+                "No. Course CMRU CMRU",
+                "Course ry school Hours/ on",
+                "Code Category subcategory",
+                "Week",
+                "L-T-P-C",
+                "1",
+                "Advanced Cloud Foundation AC CC SOSS",
+                "Computing and",
+                "(INDUSTR",
+                "Lab",
+                "7 3-0-2-5",
+                "Y",
+                "EXPERT/P",
+                "OP)",
+                "8CSCC6201",
+                "2 8CSGC6311",
+                "Elective 4: Discipline DSE EC SOSS 3 3-0-0-3",
+                "Blockchain Specific",
+                "/8CSGC6331",
+                "Technology/Digit Elective",
+                "al Image",
+                "(INDUSTR",
+                "Processing",
+                "Y FACING",
+                "MODULE)",
+                "3",
+                "Elective 5: Cloud Discipline DSE EC SOSS 3 3-0-0-3",
+                "Security/Wireless Specific",
+                "Sensor Networks Elective",
+                "(INDUSTR",
+                "8CSCC6131/ Y FACING",
+                "MODULE)",
+                "8CSGC6361",
+                "4",
+                "Internship-1 Foundation Interns 2",
+                "(CIP) hip",
+                "8INTS7010",
+                "5",
+                "Internship-2 (SIP) Foundation Interns 4",
+                "hip",
+                "6",
+                "6CAPS7010 Capstone Project Foundation captones DSE SOSS 6",
+                "7",
+                "Research DSE SOSS 1",
+                "Publication",
+                "Total 24",
+                "Paper Publication Scopus Indexed/Web of Science or equivalent esteemed journals",
+                "--- PAGE 17 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "INTERDISCIPLINARY ELECTIVE (IDE) COURSES:",
+                "Course Code School Course Name Semester",
+                "3IDSS1011 SOEC Accounting for Beginners Odd",
+                "3IDSS1031 SOEC Introduction to Taxation Odd",
+                "3IDSS1051 SOEC Personal Income Tax Odd",
+                "3IDSS1071 SOEC Financial Markets and Personal Investments Odd",
+                "6IDSS1011",
+                "SOM Introduction to Financial Management Odd",
+                "6IDSS1031",
+                "SOM Basics of Entrepreneurship Odd",
+                "6IDSS1051",
+                "SOM Finance for Non-Finance Students Odd",
+                "6IDSS1071",
+                "SOM Marketing - For the Uninitiated Odd",
+                "5IDSS1011 SOLS Essentials of Human Rights and Public Interest Law Odd",
+                "7IDSS1021",
+                "SOSSH Personality & Development Odd",
+                "7IDSS1031",
+                "SOSSH Media & Cultural Studies Odd",
+                "7IDSS1051",
+                "SOSSH Mental Health at workplace Odd",
+                "7IDSS1071",
+                "SOSSH Positive Psychology Odd",
+                "4IDSS1011 SOET Basics of Microcontroller Odd",
+                "4IDSS1021 SOET Principles of Digital system Odd",
+                "4IDSS1031 SOET Mobile Communication Odd",
+                "4IDSS1041 SOET Programming using C Odd",
+                "4IDSS1051 SOET Introduction to IoT Odd",
+                "4IDSS1061 SOET Design for Additive Manufacturing & 3D Printing Odd",
+                "4IDSS1071 SOET Fundamentals of Robotics Odd",
+                "4IDSS1081 SOET Introduction to programming with Python Odd",
+                "4IDSS1091 SOET Introduction to programming with Java Odd",
+                "4IDSS1101 SOET Fundamentals of Machine Learning Odd",
+                "4IDSS1111 SOET Basics of Web Programming Odd",
+                "4IDSS1121 SOET Digital Forensics Odd",
+                "4IDSS1131 SOET Basics of Computer Network Odd",
+                "4IDSS1141 SOET Basics of Computer Security Odd",
+                "4IDSS1151 SOET Multimedia communication Odd",
+                "4IDSS1161 SOET Principles of web communication Odd",
+                "4IDSS1171 SOET Waste Management Odd",
+                "4IDSS1181 SOET Value Engineering Odd",
+                "--- PAGE 18 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "2IDSS1011 SOA Exploration in Printmaking and Digital Fabrication Odd",
+                "3IDSS1021 SOEC Fundamentals of Banking Even",
+                "3IDSS1041 SOEC Stock Market Operations Even",
+                "3IDSS1061",
+                "SOEC Financial Management Even",
+                "6IDSS1021",
+                "SOM Human Resource Management - How it Really Works Even",
+                "6IDSS1041",
+                "SOM Introduction to Digital Marketing Even",
+                "6IDSS1061",
+                "SOM Entrepreneurship - A Primer Even",
+                "5IDSS1021",
+                "SOLS Essential Laws for Business Enterprise Even",
+                "7IDSS1041",
+                "SOSSH Women Studies Even",
+                "7IDSS1011",
+                "SOSSH Environmental Psychology Even",
+                "7IDSS1061",
+                "SOSSH Community Psychology Even",
+                "7IDSS1081",
+                "SOSSH Youth Development Even",
+                "4IDSS1191 SOET Basics of Control system Even",
+                "4IDSS1201 SOET Principles of Electronics communication Even",
+                "4IDSS1211 SOET Programming using C++ Even",
+                "4IDSS1221 SOET Basics of Electronics Even",
+                "4IDSS1231 SOET Ergonomics Even",
+                "4IDSS1241 SOET Project Management Even",
+                "4IDSS1251 SOET Fundamentals of Database Management Systems Even",
+                "4IDSS1261 SOET Network Defense Technologies Even",
+                "4IDSS1271 SOET Risk Management Even",
+                "4IDSS1281 SOET Data Science Using R Even",
+                "4IDSS1291 SOET Business Intelligence Even",
+                "4IDSS1301 SOET Principles of Cyber Law Even",
+                "4IDSS1311 SOET Residential Building Planning and Interior Designing Even",
+                "--- PAGE 19 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "COMMON CORE - SKILL ENHANCEMENT COURSES (SEC):",
+                "Course Code Course Name Semester",
+                "CPSSF1011 Foreign Language-French L1 Odd",
+                "CPSSF2011 Foreign Language-French L2 Even",
+                "CPSSF3011 Foreign Language-French L3 Odd",
+                "CPSSF1021 Foreign Language-German L1 Odd",
+                "CPSSF2021 Foreign Language-German L2 Even",
+                "CPSSF3021 Foreign Language-German L3 Even",
+                "CPSSF1031 Foreign Language-Spanish L1 Odd",
+                "CPSSF2031 Foreign Language-Spanish L2 Even",
+                "CPSSF3031 Foreign Language-Spanish L3 Odd",
+                "CPSSN1011 NCC-1 Odd",
+                "CPSSN2011 NCC-2 Even",
+                "CPSSN3011 NCC-3 Odd",
+                "CPSSN4011 NCC-4 Even",
+                "CPSSN5011 NCC-5 Odd",
+                "CPSSN6011 NCC-6 Even",
+                "CPSSN1021 NSS-1 Odd",
+                "CPSSN2021 NSS-2 Even",
+                "CPSSN3021 NSS-3 Odd",
+                "CPSSN4021 NSS-4 Even",
+                "CPSSN5021 NSS-5 Odd",
+                "CPSSN6021 NSS-6 Even",
+                "CPSSN1031 YRC-1 Odd",
+                "CPSSN2031 YRC-2 Even",
+                "CPSSN3031 YRC-3 Odd",
+                "CPSSN4031 YRC-4 Even",
+                "CPSSN5031 YRC-5 Odd",
+                "CPSSN6031 YRC-6 Even",
+                "CPSSN1041 Rotaract-1 Odd",
+                "CPSSN2041 Rotaract-2 Even",
+                "CPSSN3041 Rotaract-3 Odd",
+                "CPSSN4041 Rotaract-4 Even",
+                "CPSSN5041 Rotaract-5 Odd",
+                "CPSSN6041 Rotaract-6 Even",
+                "--- PAGE 20 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "GRADUATE REQUIREMENT:",
+                "Course Code Course Name Semester",
+                "GPSBD1101 Oral and Written Communication I",
+                "GPSBT1041 Design Thinking (DTP) II",
+                "GPSDL1051 Strategies for Self-management (SSM) III",
+                "--- PAGE 21 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "First Semester Syllabus",
+            "content": [
+                "--- PAGE 22 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "problem.",
+                "structures.",
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Summarize the concepts of data structures and their applications.",
+                "CO2: Analyze and represent data using various data structures like hash tables, trees and graphs to solve",
+                "problems.",
+                "CO3: Choose and design an appropriate data structure for a specified problem.",
+                "CO4: Develop and analyze algorithms for data structure operations.",
+                "CO5: Apply the concepts of data structures in solving real-world problems.",
+                "Education, 2014.",
+                "Education, 1983.",
+                "--- PAGE 23 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Edition, PHI, 2009.",
+                "2005.",
+                "--- PAGE 24 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6601",
+                    "details": {
+                        "objectives": [
+                            "1. To strengthen the ability to identify and apply the suitable data structure for the given real world",
+                            "2. To develop skills to analyze and design of hash tables and priority queues.",
+                            "3. To be able to design and analyze the various tree data structures.",
+                            "4. To be able to design and analyze the various graph data structures.",
+                            "5. To enable them to write algorithms for solving problems with the help of fundamental data"
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO DATA STRUCTURES",
+                                    "9 Hours",
+                                    "Review of basic data structures- Abstract data types, Data Structures, Algorithms, Big Oh, Small Oh,",
+                                    "Omega and Theta notations, Solving recurrence relations, Master theorems."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: HASHING AND PRIORITY QUEUES",
+                                    "9 Hours",
+                                    "Review of Hashing, Hash Function, Collision Resolution Techniques in Hashing, Separate Chaining,",
+                                    "Open Addressing, Linear Probing, Quadratic Probing, Double Hashing, Rehashing, Extendible",
+                                    "Hashing, Priority Queues, Definition, ADT, Realizing a Priority Queue using Heaps, Definition,",
+                                    "Insertion, Deletion."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: TREES",
+                                    "9 Hours",
+                                    "Review of trees, Binary search trees, Balanced search trees, AVL trees, Splay trees, Red-black trees,",
+                                    "B-trees, B+ trees, Tries."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: GRAPHS",
+                                    "9 Hours",
+                                    "Graph ADT, Graph Representations, Graph Traversals, Depth First Search, Breadth First Search,",
+                                    "Topological Sort, Shortest Paths, Dijkstra\u2019s Algorithm, Minimum Spanning Tree, Prim\u2019s Algorithm,",
+                                    "Kruskal\u2019s Algorithm."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: ALGORITHM DESIGN TECHNIQUES",
+                                    "9 Hours",
+                                    "Greedy Algorithms, Divide and Conquer, Dynamic Programming, Backtracking, Branch and Bound."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. Mark Allen Weiss, \u201cData Structures and Algorithm Analysis in C++\u201d, 4th Edition, Pearson",
+                            "2. A. V. Aho, J. E. Hopcroft, and J. D. Ullman, \u201cData Structures and Algorithms\u201d, Pearson"
+                        ],
+                        "references": [
+                            "1. T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, \u201cIntroduction to Algorithms\u201d, 3rd",
+                            "2. S. Sahni, \u201cData Structures, Algorithms and Applications in C++\u201d, 2nd Edition, University Press,",
+                            "3. R. Lafore, \u201cData Structures and Algorithms in Java\u201d, 2nd Edition, Sams Publishing, 2003."
+                        ],
+                        "laboratory": [
+                            "1. Write a C program to implement hashing with separate chaining.",
+                            "2. Write a C program to implement hashing with open addressing.",
+                            "3. Write a C program to implement a priority queue using a heap.",
+                            "4. Write a C program to implement an AVL tree.",
+                            "5. Write a C program to implement a splay tree.",
+                            "6. Write a C program to implement a red-black tree.",
+                            "7. Write a C program to implement a B-tree.",
+                            "8. Write a C program to implement a B+ tree.",
+                            "9. Write a C program to implement a trie.",
+                            "10. Write a C program to implement Dijkstra\u2019s algorithm.",
+                            "11. Write a C program to implement Prim\u2019s algorithm.",
+                            "12. Write a C program to implement Kruskal\u2019s algorithm."
+                        ]
+                    },
+                    "name": "Advanced Data Structures using C and Lab",
+                    "category": "Foundation Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Basic Programming, Data Structures CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the concepts of relational and non-relational databases.",
+                "CO2: Apply the concepts of query processing and optimization.",
+                "CO3: Apply the concepts of transaction management, concurrency control and recovery.",
+                "CO4: Understand the concepts of distributed databases and NoSQL databases.",
+                "CO5: Understand the concepts of data warehousing and data mining.",
+                "Education, 2016.",
+                "McGraw-Hill, 2019.",
+                "--- PAGE 25 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Edition, Pearson Education, 2006.",
+                "Polyglot Persistence\u201d, 1st Edition, Pearson Education, 2012.",
+                "McGraw-Hill, 1984.",
+                "--- PAGE 26 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6701",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the concepts of relational and non-relational databases.",
+                            "2. To learn the concepts of query processing and optimization.",
+                            "3. To understand the concepts of transaction management, concurrency control and recovery.",
+                            "4. To learn the concepts of distributed databases and NoSQL databases.",
+                            "5. To understand the concepts of data warehousing and data mining."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: RELATIONAL DATABASES",
+                                    "9 Hours",
+                                    "Introduction to Relational Model, SQL, Normalization, Query Processing and Optimization, Transaction",
+                                    "Processing, Concurrency Control, Recovery."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: PARALLEL AND DISTRIBUTED DATABASES",
+                                    "9 Hours",
+                                    "Database System Architectures: Centralized and Client-Server Architectures, Server System",
+                                    "Architectures, Parallel Systems, Distributed Systems, Parallel Databases: I/O Parallelism, Inter and Intra",
+                                    "Query Parallelism, Inter and Intra operation Parallelism, Design of Parallel Systems, Distributed",
+                                    "Database Concepts, Distributed Data Storage, Distributed Transactions, Commit Protocols, Concurrency",
+                                    "Control in Distributed Databases, Availability, Query Processing in Distributed Databases."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: OBJECT AND OBJECT RELATIONAL DATABASES",
+                                    "9 Hours",
+                                    "Concepts for Object Databases: Object Identity, Object structure, Type Constructors, Encapsulation of",
+                                    "Operations, Methods, and Persistence, Type and Class Hierarchies, Inheritance, Complex Objects,",
+                                    "Object Database Standards, Languages and Design: ODMG Model, ODL, OQL, Object Relational and",
+                                    "Extended \u2013 Relational Systems: Object Relational features in SQL/Oracle, Case Studies."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: EMERGING DATABASE TECHNOLOGIES",
+                                    "9 Hours",
+                                    "XML Databases: XML Data Model, DTD, XML Schema, XML Querying, Web Databases, Geographic",
+                                    "Information Systems, Biological Data Management, Cloud Based Databases: Data Storage Systems on",
+                                    "the Cloud, Cloud Storage Architectures, Cloud Data Models, Query Languages, Indexing in Cloud",
+                                    "Databases, Case Studies."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: NOSQL DATABASES",
+                                    "9 Hours",
+                                    "NoSQL Databases: Introduction, CAP Theorem, Document Based, Key-Value Stores, Column Based,",
+                                    "Graph Based, NoSQL MongoDB, Cassandra, HBASE, Neo4j, NoSQL vs SQL."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. R. Elmasri and S. B. Navathe, \u201cFundamentals of Database Systems\u201d, 7th Edition, Pearson",
+                            "2. A. Silberschatz, H. F. Korth, and S. Sudarshan, \u201cDatabase System Concepts\u201d, 7th Edition,"
+                        ],
+                        "references": [
+                            "1. C. J. Date, A. Kannan, and S. Swamynathan, \u201cAn Introduction to Database Systems\u201d, 8th",
+                            "2. P. J. Sadalage and M. Fowler, \u201cNoSQL Distilled: A Brief Guide to the Emerging World of",
+                            "3. S. Ceri and G. Pelagatti, \u201cDistributed Databases: Principles and Systems\u201d, 1st Edition,"
+                        ],
+                        "laboratory": [
+                            "1. Write a SQL query to create a table and insert data.",
+                            "2. Write a SQL query to update and delete data from a table.",
+                            "3. Write a SQL query to retrieve data from a table using various clauses.",
+                            "4. Write a SQL query to perform joins and subqueries.",
+                            "5. Write a PL/SQL program to create a function and a procedure.",
+                            "6. Write a PL/SQL program to create a trigger.",
+                            "7. Write a program to implement a distributed database.",
+                            "8. Write a program to implement a NoSQL database.",
+                            "9. Write a program to implement a data warehouse.",
+                            "10. Write a program to implement a data mining algorithm."
+                        ]
+                    },
+                    "name": "Advanced Database Management Systems and Lab",
+                    "category": "Foundation Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Database Management Systems CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of operating systems.",
+                "CO2: Apply the concepts of process management, memory management, and storage management.",
+                "CO3: Apply the concepts of protection and security.",
+                "CO4: Understand the concepts of distributed systems.",
+                "CO5: Understand the concepts of virtualization and cloud computing.",
+                "Wiley, 2018.",
+                "--- PAGE 27 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "--- PAGE 28 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC5251",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of operating systems.",
+                            "2. To learn the concepts of process management, memory management, and storage management.",
+                            "3. To understand the concepts of protection and security.",
+                            "4. To learn the concepts of distributed systems.",
+                            "5. To understand the concepts of virtualization and cloud computing."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION",
+                                    "9 Hours",
+                                    "What is an Operating System, Simple Batch Systems, Multiprogrammed Batches systems, Time-Sharing",
+                                    "Systems, Personal-computer systems, Parallel systems, Distributed Systems, Real-Time Systems,",
+                                    "System components, Operating-System services, System calls, System programs, System structure,",
+                                    "Virtual machines."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: PROCESS MANAGEMENT",
+                                    "9 Hours",
+                                    "Process concept, Process scheduling, Cooperating processes, Threads, Interprocess communication,",
+                                    "Scheduling criteria, Scheduling algorithms, Multiple-processor scheduling, Real-time scheduling,",
+                                    "Algorithm evaluation, The Critical-Section problem, Synchronization hardware, Semaphores, Classical",
+                                    "problems of synchronization, Critical regions, Monitors."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: MEMORY MANAGEMENT",
+                                    "9 Hours",
+                                    "Logical and Physical Address Space, Swapping, Contiguous Allocation, Paging, Segmentation,",
+                                    "Segmentation with Paging, Virtual Memory, Demand paging, Page replacement, Page-replacement",
+                                    "algorithms, Performance of demand paging, Thrashing, Demand segmentation."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: STORAGE MANAGEMENT",
+                                    "9 Hours",
+                                    "File concept, Access methods, Directory structure, File-system mounting, File sharing, Protection, File-",
+                                    "system structure, Allocation methods, Free-space management, Directory implementation, Efficiency",
+                                    "and performance, Recovery, Log-structured file systems, NFS."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: PROTECTION AND SECURITY",
+                                    "9 Hours",
+                                    "Goals of protection, Domain of protection, Access matrix, Implementation of access matrix,",
+                                    "Revocation of access rights, Capability-Based systems, Language-Based Protection, The Security",
+                                    "problem, Authentication, One-Time passwords, Program threats, System threats, Threat monitoring,",
+                                    "Encryption, Computer-Security classifications."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. A. Silberschatz, P. B. Galvin, and G. Gagne, \u201cOperating System Concepts\u201d, 10th Edition,"
+                        ],
+                        "references": [
+                            "1. W. Stallings, \u201cOperating Systems: Internals and Design Principles\u201d, 9th Edition, Pearson, 2018.",
+                            "2. A. S. Tanenbaum, \u201cModern Operating Systems\u201d, 4th Edition, Pearson, 2015."
+                        ]
+                    },
+                    "name": "Operating System",
+                    "category": "Foundation Course L-T-P-C 3-0-0-3",
+                    "prerequisites": "Computer Organization and Architecture CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of probability and statistics.",
+                "CO2: Apply the concepts of probability distributions, sampling distributions, and estimation.",
+                "CO3: Apply the concepts of hypothesis testing, correlation, and regression.",
+                "CO4: Understand the concepts of analysis of variance and design of experiments.",
+                "CO5: Understand the concepts of statistical quality control.",
+                "Learning, 2016.",
+                "Engineers\u201d, 9th Edition, Pearson, 2017.",
+                "--- PAGE 29 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Chand & Sons, 2020.",
+                "Scientists\u201d, 9th Edition, Pearson, 2012.",
+                "--- PAGE 30 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8STAT5041",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of probability and statistics.",
+                            "2. To learn the concepts of probability distributions, sampling distributions, and estimation.",
+                            "3. To understand the concepts of hypothesis testing, correlation, and regression.",
+                            "4. To learn the concepts of analysis of variance and design of experiments.",
+                            "5. To understand the concepts of statistical quality control."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO PROBABILITY",
+                                    "9 Hours",
+                                    "Sample space and events, Axioms of probability, Conditional probability, Bayes\u2019 theorem, Random",
+                                    "variables, Discrete and continuous random variables, Probability distributions, Mathematical expectation."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: PROBABILITY DISTRIBUTIONS",
+                                    "9 Hours",
+                                    "Discrete distributions: Binomial, Poisson, Geometric. Continuous distributions: Uniform, Normal,",
+                                    "Exponential, Gamma. Joint distributions, Marginal and conditional distributions, Covariance and",
+                                    "correlation, Central limit theorem."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: SAMPLING AND ESTIMATION",
+                                    "9 Hours",
+                                    "Sampling distributions, t-distribution, Chi-square distribution, F-distribution, Point estimation,",
+                                    "Interval estimation, Confidence intervals for mean, proportion, and variance."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: HYPOTHESIS TESTING",
+                                    "9 Hours",
+                                    "Null and alternative hypotheses, Type I and Type II errors, Level of significance, One-tailed and two-",
+                                    "tailed tests, Tests for mean, proportion, and variance, Analysis of variance, One-way and two-way",
+                                    "classification."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: CORRELATION AND REGRESSION",
+                                    "9 Hours",
+                                    "Simple linear correlation and regression, Multiple correlation and regression, Coefficient of",
+                                    "determination, Goodness of fit, Non-linear regression."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. J. L. Devore, \u201cProbability and Statistics for Engineering and the Sciences\u201d, 9th Edition, Cengage",
+                            "2. R. A. Johnson, I. Miller, and J. Freund, \u201cMiller & Freund\u2019s Probability and Statistics for"
+                        ],
+                        "references": [
+                            "1. S. C. Gupta and V. K. Kapoor, \u201cFundamentals of Mathematical Statistics\u201d, 12th Edition, Sultan",
+                            "2. R. E. Walpole, R. H. Myers, S. L. Myers, and K. Ye, \u201cProbability & Statistics for Engineers &"
+                        ]
+                    },
+                    "name": "Probability and Statistics",
+                    "category": "Foundation Course L-T-P-C 3-0-0-3",
+                    "prerequisites": "Basic Mathematics CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of artificial intelligence.",
+                "CO2: Apply the concepts of problem solving, search, and knowledge representation.",
+                "CO3: Apply the concepts of planning, learning, and natural language processing.",
+                "CO4: Understand the concepts of expert systems and robotics.",
+                "CO5: Understand the concepts of machine learning and deep learning.",
+                "2020.",
+                "--- PAGE 31 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "2004.",
+                "Edition, Pearson, 2009.",
+                "--- PAGE 32 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSAI6131",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of artificial intelligence.",
+                            "2. To learn the concepts of problem solving, search, and knowledge representation.",
+                            "3. To understand the concepts of planning, learning, and natural language processing.",
+                            "4. To learn the concepts of expert systems and robotics.",
+                            "5. To understand the concepts of machine learning and deep learning."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO ARTIFICIAL INTELLIGENCE",
+                                    "9 Hours",
+                                    "What is AI, The AI Problems, The Underlying Assumption, What is an AI Technique, The Level of the",
+                                    "Model, Criteria for Success, Some General References, One Final Word and Beyond."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: PROBLEM SOLVING",
+                                    "9 Hours",
+                                    "State Space Search, Production Systems, Problem Characteristics, Heuristic Search Techniques, Generate-",
+                                    "and-Test, Hill Climbing, Best-first Search, Problem Reduction, Constraint Satisfaction, Means-ends",
+                                    "Analysis."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: KNOWLEDGE REPRESENTATION",
+                                    "9 Hours",
+                                    "Knowledge Representation Issues, Representations and Mappings, Approaches to Knowledge",
+                                    "Representation, Issues in Knowledge Representation, The Frame Problem, Representing Simple Facts in",
+                                    "Logic, Representing Instance and ISA Relationships, Computable Functions and Predicates, Resolution,",
+                                    "Natural Deduction."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: PLANNING AND LEARNING",
+                                    "9 Hours",
+                                    "Planning, The Blocks World, Components of a Planning System, Goal Stack Planning, Nonlinear",
+                                    "Planning, Hierarchical Planning, Reactive Systems, Learning, Rote Learning, Learning by Taking Advice,",
+                                    "Learning in Problem-solving, Learning from Examples: Induction, Explanation-based Learning, Discovery,",
+                                    "Analogy, Formal Learning Theory, Neural Net Learning and Genetic Learning."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: NATURAL LANGUAGE PROCESSING AND EXPERT SYSTEMS",
+                                    "9 Hours",
+                                    "Natural Language Processing, Introduction, Syntactic Processing, Semantic Analysis, Discourse and",
+                                    "Pragmatic Processing, Statistical Natural Language Processing, Spell Checking, Expert Systems,",
+                                    "Representing and Using Domain Knowledge, Expert System Shells, Explanation, Knowledge Acquisition."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. E. Rich, K. Knight, and S. B. Nair, \u201cArtificial Intelligence\u201d, 3rd Edition, McGraw-Hill, 2009.",
+                            "2. S. Russell and P. Norvig, \u201cArtificial Intelligence: A Modern Approach\u201d, 4th Edition, Pearson,"
+                        ],
+                        "references": [
+                            "1. D. W. Patterson, \u201cIntroduction to Artificial Intelligence and Expert Systems\u201d, 1st Edition, PHI,",
+                            "2. G. F. Luger, \u201cArtificial Intelligence: Structures and Strategies for Complex Problem Solving\u201d, 6th"
+                        ],
+                        "laboratory": [
+                            "1. Write a program to implement breadth-first search.",
+                            "2. Write a program to implement depth-first search.",
+                            "3. Write a program to implement best-first search.",
+                            "4. Write a program to implement A* algorithm.",
+                            "5. Write a program to implement AO* algorithm.",
+                            "6. Write a program to implement minimax algorithm.",
+                            "7. Write a program to implement alpha-beta pruning.",
+                            "8. Write a program to implement a simple expert system.",
+                            "9. Write a program to implement a simple neural network.",
+                            "10. Write a program to implement a simple genetic algorithm."
+                        ]
+                    },
+                    "name": "Artificial Intelligence and Lab",
+                    "category": "Elective Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Basic Programming, Data Structures CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of object-oriented modeling and design.",
+                "CO2: Apply the concepts of UML and its diagrams.",
+                "CO3: Apply the concepts of structural and behavioral modeling.",
+                "CO4: Understand the concepts of architectural modeling.",
+                "CO5: Understand the concepts of design patterns.",
+                "\u201cObject-Oriented Analysis and Design with Applications\u201d, 3rd Edition, Addison-Wesley, 2007.",
+                "Prentice Hall, 2005.",
+                "--- PAGE 33 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Edition, Addison-Wesley, 2004.",
+                "Design and Iterative Development\u201d, 3rd Edition, Pearson, 2005.",
+                "--- PAGE 34 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "Second Semester Syllabus",
+            "content": [
+                "--- PAGE 35 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of machine learning.",
+                "CO2: Apply the concepts of supervised, unsupervised, and reinforcement learning.",
+                "CO3: Apply the concepts of regression, classification, clustering, and dimensionality reduction.",
+                "CO4: Understand the concepts of neural networks and deep learning.",
+                "CO5: Understand the concepts of natural language processing and computer vision.",
+                "O\u2019Reilly, 2019.",
+                "--- PAGE 36 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "--- PAGE 37 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSDS6201",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of machine learning.",
+                            "2. To learn the concepts of supervised, unsupervised, and reinforcement learning.",
+                            "3. To understand the concepts of regression, classification, clustering, and dimensionality reduction.",
+                            "4. To learn the concepts of neural networks and deep learning.",
+                            "5. To understand the concepts of natural language processing and computer vision."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO MACHINE LEARNING",
+                                    "9 Hours",
+                                    "What is Machine Learning, Types of Machine Learning, Supervised Learning, Unsupervised Learning,",
+                                    "Reinforcement Learning, The Machine Learning Process, A First Application: The Iris Dataset."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: SUPERVISED LEARNING",
+                                    "9 Hours",
+                                    "Regression, Linear Regression, Multiple Linear Regression, Polynomial Regression, Support Vector",
+                                    "Regression, Decision Tree Regression, Random Forest Regression, Classification, Logistic Regression,",
+                                    "K-Nearest Neighbors, Support Vector Machine, Naive Bayes, Decision Tree Classification, Random",
+                                    "Forest Classification."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: UNSUPERVISED LEARNING",
+                                    "9 Hours",
+                                    "Clustering, K-Means Clustering, Hierarchical Clustering, Density-Based Clustering, Dimensionality",
+                                    "Reduction, Principal Component Analysis, Linear Discriminant Analysis, Kernel PCA."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: NEURAL NETWORKS AND DEEP LEARNING",
+                                    "9 Hours",
+                                    "Introduction to Neural Networks, The Perceptron, Multilayer Perceptrons, Backpropagation, Activation",
+                                    "Functions, Loss Functions, Optimizers, Introduction to Deep Learning, Convolutional Neural Networks,",
+                                    "Recurrent Neural Networks, Long Short-Term Memory, Autoencoders."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: NATURAL LANGUAGE PROCESSING AND COMPUTER VISION",
+                                    "9 Hours",
+                                    "Natural Language Processing, Bag-of-Words, TF-IDF, Word2Vec, GloVe, Computer Vision, Image",
+                                    "Classification, Object Detection, Image Segmentation, Transfer Learning."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. A. G\u00e9ron, \u201cHands-On Machine Learning with Scikit-Learn, Keras & TensorFlow\u201d, 2nd Edition,",
+                            "2. S. Raschka and V. Mirjalili, \u201cPython Machine Learning\u201d, 3rd Edition, Packt Publishing, 2019."
+                        ],
+                        "references": [
+                            "1. T. M. Mitchell, \u201cMachine Learning\u201d, 1st Edition, McGraw-Hill, 1997.",
+                            "2. C. M. Bishop, \u201cPattern Recognition and Machine Learning\u201d, 1st Edition, Springer, 2006."
+                        ],
+                        "laboratory": [
+                            "1. Write a Python program to implement linear regression.",
+                            "2. Write a Python program to implement logistic regression.",
+                            "3. Write a Python program to implement k-nearest neighbors.",
+                            "4. Write a Python program to implement support vector machine.",
+                            "5. Write a Python program to implement naive Bayes.",
+                            "6. Write a Python program to implement decision tree.",
+                            "7. Write a Python program to implement random forest.",
+                            "8. Write a Python program to implement k-means clustering.",
+                            "9. Write a Python program to implement principal component analysis.",
+                            "10. Write a Python program to implement a simple neural network."
+                        ]
+                    },
+                    "name": "Machine Learning using Python and Lab",
+                    "category": "Foundation Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Basic Programming, Python Programming CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of advanced Java programming.",
+                "CO2: Apply the concepts of multithreading, networking, and database programming.",
+                "CO3: Apply the concepts of web programming using servlets and JSPs.",
+                "CO4: Understand the concepts of web services and enterprise Java beans.",
+                "CO5: Understand the concepts of Spring and Hibernate frameworks.",
+                "2019.",
+                "Publications, 2015.",
+                "--- PAGE 39 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSPL6421",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of advanced Java programming.",
+                            "2. To learn the concepts of multithreading, networking, and database programming.",
+                            "3. To understand the concepts of web programming using servlets and JSPs.",
+                            "4. To learn the concepts of web services and enterprise Java beans.",
+                            "5. To understand the concepts of Spring and Hibernate frameworks."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: MULTITHREADING AND NETWORKING",
+                                    "9 Hours",
+                                    "Multithreading, The Java Thread Model, The Main Thread, Creating a Thread, Creating Multiple",
+                                    "Threads, Using isAlive() and join(), Thread Priorities, Synchronization, Interthread Communication,",
+                                    "Suspending, Resuming, and Stopping Threads, Networking, Networking Basics, The Networking Classes",
+                                    "and Interfaces, InetAddress, TCP/IP Client Sockets, URL, URLConnection, TCP/IP Server Sockets,",
+                                    "Datagrams."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: DATABASE PROGRAMMING",
+                                    "9 Hours",
+                                    "JDBC, The JDBC Architecture, The JDBC API, The Steps to Create a JDBC Application, The",
+                                    "DriverManager Class, The Connection Interface, The Statement Interface, The PreparedStatement",
+                                    "Interface, The CallableStatement Interface, The ResultSet Interface, The ResultSetMetaData Interface,",
+                                    "RowSet, Transactions, Connection Pooling."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: WEB PROGRAMMING",
+                                    "9 Hours",
+                                    "Servlets, The Servlet Lifecycle, The Servlet API, The javax.servlet Package, The javax.servlet.http",
+                                    "Package, Handling HTTP Requests and Responses, Using Cookies, Session Tracking, JavaServer Pages",
+                                    "(JSP), The JSP Lifecycle, The JSP API, JSP Implicit Objects, JSP Directives, JSP Scripting Elements,",
+                                    "JSP Actions, Expression Language (EL), JavaServer Pages Standard Tag Library (JSTL)."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: WEB SERVICES AND ENTERPRISE JAVA BEANS",
+                                    "9 Hours",
+                                    "Web Services, Introduction to Web Services, SOAP, WSDL, UDDI, JAX-WS, JAX-RS, Enterprise",
+                                    "JavaBeans (EJB), The EJB Architecture, The EJB Components, Session Beans, Message-Driven Beans,",
+                                    "Entity Beans, The EJB Lifecycle, The EJB Security, The EJB Transactions."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: SPRING AND HIBERNATE",
+                                    "9 Hours",
+                                    "Spring, Introduction to Spring, The Spring Architecture, The Spring Modules, Inversion of Control (IoC)",
+                                    "and Dependency Injection (DI), Aspect-Oriented Programming (AOP), Spring MVC, Spring JDBC,",
+                                    "Spring ORM, Hibernate, Introduction to Hibernate, The Hibernate Architecture, The Hibernate",
+                                    "Configuration, The Hibernate Sessions, The Hibernate Objects, The Hibernate Query Language (HQL),",
+                                    "The Hibernate Criteria API.",
+                                    "--- PAGE 38 ---",
+                                    "STE 2023-25 School of Science Studies",
+                                    "Master of Computer Applications"
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. H. Schildt, \u201cJava: The Complete Reference\u201d, 11th Edition, McGraw-Hill, 2019.",
+                            "2. C. S. Horstmann, \u201cCore Java, Volume II\u2014Advanced Features\u201d, 11th Edition, Prentice Hall,"
+                        ],
+                        "references": [
+                            "1. C. Bauer, G. King, and G. Gregory, \u201cJava Persistence with Hibernate\u201d, 2nd Edition, Manning",
+                            "2. C. Walls, \u201cSpring in Action\u201d, 5th Edition, Manning Publications, 2018."
+                        ],
+                        "laboratory": [
+                            "1. Write a Java program to implement multithreading.",
+                            "2. Write a Java program to implement networking.",
+                            "3. Write a Java program to implement database programming using JDBC.",
+                            "4. Write a Java program to implement a servlet.",
+                            "5. Write a Java program to implement a JSP.",
+                            "6. Write a Java program to implement a web service.",
+                            "7. Write a Java program to implement an EJB.",
+                            "8. Write a Java program to implement Spring framework.",
+                            "9. Write a Java program to implement Hibernate framework.",
+                            "10. Write a Java program to develop a web application using Spring and Hibernate."
+                        ]
+                    },
+                    "name": "Advanced Java Programming and Lab",
+                    "category": "Foundation Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Java Programming CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of distributed and parallel computing.",
+                "CO2: Apply the concepts of communication, coordination, and synchronization in distributed systems.",
+                "CO3: Apply the concepts of distributed algorithms, transactions, and replication.",
+                "CO4: Understand the concepts of parallel programming models and algorithms.",
+                "CO5: Understand the concepts of parallel architectures and programming.",
+                "Design\u201d, 5th Edition, Pearson, 2012.",
+                "Edition, Pearson, 2003.",
+                "--- PAGE 40 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Edition, Pearson, 2017.",
+                "Networked Workstations and Parallel Computers\u201d, 2nd Edition, Pearson, 2005.",
+                "--- PAGE 41 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6321",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of distributed and parallel computing.",
+                            "2. To learn the concepts of communication, coordination, and synchronization in distributed systems.",
+                            "3. To understand the concepts of distributed algorithms, transactions, and replication.",
+                            "4. To learn the concepts of parallel programming models and algorithms.",
+                            "5. To understand the concepts of parallel architectures and programming."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO DISTRIBUTED AND PARALLEL COMPUTING",
+                                    "9 Hours",
+                                    "Introduction to Distributed Systems, Characterization of Distributed Systems, System Models,",
+                                    "Architectural Models, Fundamental Models, Introduction to Parallel Computing, Parallel Programming",
+                                    "Platforms, Principles of Parallel Algorithm Design."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: COMMUNICATION, COORDINATION, AND SYNCHRONIZATION",
+                                    "9 Hours",
+                                    "Interprocess Communication, The API for the Internet Protocols, External Data Representation and",
+                                    "Marshalling, Client-Server Communication, Group Communication, Case Study: Interprocess",
+                                    "Communication in UNIX, Coordination, Clock Synchronization, Logical Clocks, Mutual Exclusion,",
+                                    "Election Algorithms."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: DISTRIBUTED ALGORITHMS, TRANSACTIONS, AND REPLICATION",
+                                    "9 Hours",
+                                    "Distributed Algorithms, Distributed Deadlock, Distributed Shared Memory, Distributed File Systems,",
+                                    "Transactions, Nested Transactions, Locks, Optimistic Concurrency Control, Timestamp Ordering,",
+                                    "Comparison of Methods for Concurrency Control, Replication, System Model and Group",
+                                    "Communication, Fault-Tolerant Services, Case Studies: The Andrew File System, The Sun Network",
+                                    "File System."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: PARALLEL PROGRAMMING MODELS AND ALGORITHMS",
+                                    "9 Hours",
+                                    "Parallel Programming Models, Shared Memory Model, Threads Model, Message Passing Model, Data",
+                                    "Parallel Model, Other Models, Parallel Algorithms, Sorting, Searching, Matrix Multiplication, Graph",
+                                    "Algorithms."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: PARALLEL ARCHITECTURES AND PROGRAMMING",
+                                    "9 Hours",
+                                    "Parallel Architectures, Multiprocessors, Multicomputers, Clusters, Grids, Clouds, Parallel",
+                                    "Programming, Shared-Memory Programming with OpenMP, Message-Passing Programming with MPI,",
+                                    "Data Parallel Programming with CUDA."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. G. Coulouris, J. Dollimore, T. Kindberg, and G. Blair, \u201cDistributed Systems: Concepts and",
+                            "2. A. Grama, A. Gupta, G. Karypis, and V. Kumar, \u201cIntroduction to Parallel Computing\u201d, 2nd"
+                        ],
+                        "references": [
+                            "1. A. S. Tanenbaum and M. Van Steen, \u201cDistributed Systems: Principles and Paradigms\u201d, 3rd",
+                            "2. B. Wilkinson and M. Allen, \u201cParallel Programming: Techniques and Applications Using"
+                        ]
+                    },
+                    "name": "Distributed and Parallel Computing",
+                    "category": "Foundation Course L-T-P-C 3-0-0-3",
+                    "prerequisites": "Operating Systems, Computer Networks CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of advanced computer networks.",
+                "CO2: Apply the concepts of wireless and mobile networks.",
+                "CO3: Apply the concepts of multimedia networking and quality of service.",
+                "CO4: Understand the concepts of network security and management.",
+                "CO5: Understand the concepts of software defined networking and network functions virtualization.",
+                "Pearson, 2021.",
+                "--- PAGE 42 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Morgan Kaufmann, 2012.",
+                "--- PAGE 43 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6441",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of advanced computer networks.",
+                            "2. To learn the concepts of wireless and mobile networks.",
+                            "3. To understand the concepts of multimedia networking and quality of service.",
+                            "4. To learn the concepts of network security and management.",
+                            "5. To understand the concepts of software defined networking and network functions virtualization."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: WIRELESS AND MOBILE NETWORKS",
+                                    "9 Hours",
+                                    "Introduction, Wireless Links and Network Characteristics, WiFi: 802.11 Wireless LANs, Cellular",
+                                    "Internet Access, Mobility Management: Principles, Mobile IP, Managing Mobility in Cellular Networks,",
+                                    "Wireless and Mobility: Impact on Higher-Layer Protocols."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: MULTIMEDIA NETWORKING",
+                                    "9 Hours",
+                                    "Multimedia Networking Applications, Streaming Stored Video, Voice-over-IP, Protocols for Real-Time",
+                                    "Conversational Applications, Network Support for Multimedia, Quality of Service, Scheduling and",
+                                    "Policing Mechanisms, Integrated Services, Differentiated Services."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: NETWORK SECURITY",
+                                    "9 Hours",
+                                    "Principles of Cryptography, Message Integrity and End-Point Authentication, Securing E-mail,",
+                                    "Securing TCP Connections: SSL, Network-Layer Security: IPsec, Securing Wireless LANs, Operational",
+                                    "Security: Firewalls and Intrusion Detection Systems."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: NETWORK MANAGEMENT",
+                                    "9 Hours",
+                                    "What is Network Management?, The Infrastructure for Network Management, The Internet-Standard",
+                                    "Management Framework, ASN.1, SNMP, Security and Administration, TMN, Network Management",
+                                    "Tools and Systems."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: SOFTWARE DEFINED NETWORKING AND NETWORK FUNCTIONS",
+                                    "9 Hours",
+                                    "VIRTUALIZATION",
+                                    "Introduction to Software Defined Networking (SDN), The SDN Architecture, The SDN Control Plane,",
+                                    "The SDN Data Plane, The SDN Application Plane, Network Functions Virtualization (NFV), The NFV",
+                                    "Architecture, The NFV Infrastructure, The NFV Management and Orchestration."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. J. F. Kurose and K. W. Ross, \u201cComputer Networking: A Top-Down Approach\u201d, 8th Edition,",
+                            "2. W. Stallings, \u201cData and Computer Communications\u201d, 10th Edition, Pearson, 2014."
+                        ],
+                        "references": [
+                            "1. L. L. Peterson and B. S. Davie, \u201cComputer Networks: A Systems Approach\u201d, 5th Edition,",
+                            "2. A. S. Tanenbaum and D. J. Wetherall, \u201cComputer Networks\u201d, 5th Edition, Pearson, 2011."
+                        ]
+                    },
+                    "name": "Advanced Computer Networks",
+                    "category": "Foundation Course L-T-P-C 3-0-0-3",
+                    "prerequisites": "Computer Networks CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of optimization.",
+                "CO2: Apply the concepts of linear programming, transportation, and assignment problems.",
+                "CO3: Apply the concepts of integer programming, dynamic programming, and game theory.",
+                "CO4: Understand the concepts of queuing theory and simulation.",
+                "CO5: Understand the concepts of project management and network analysis.",
+                "--- PAGE 44 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "McGraw-Hill, 2021.",
+                "2012.",
+                "--- PAGE 45 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6431",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of optimization.",
+                            "2. To learn the concepts of linear programming, transportation, and assignment problems.",
+                            "3. To understand the concepts of integer programming, dynamic programming, and game theory.",
+                            "4. To learn the concepts of queuing theory and simulation.",
+                            "5. To understand the concepts of project management and network analysis."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO OPTIMIZATION",
+                                    "9 Hours",
+                                    "Introduction, Historical Development, Engineering Applications of Optimization, Statement of an",
+                                    "Optimization Problem, Classification of Optimization Problems, Optimization Techniques."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: LINEAR PROGRAMMING",
+                                    "9 Hours",
+                                    "Introduction, Formulation of Linear Programming Problems, Graphical Solution, Simplex Method,",
+                                    "Big-M Method, Two-Phase Method, Duality in Linear Programming, Sensitivity Analysis."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: TRANSPORTATION AND ASSIGNMENT PROBLEMS",
+                                    "9 Hours",
+                                    "Introduction, Formulation of Transportation Problem, North-West Corner Method, Least-Cost Method,",
+                                    "Vogel\u2019s Approximation Method, Optimality Test, MODI Method, Unbalanced Transportation Problem,",
+                                    "Degeneracy in Transportation Problem, Assignment Problem, Hungarian Method, Unbalanced",
+                                    "Assignment Problem, Traveling Salesman Problem."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: INTEGER PROGRAMMING, DYNAMIC PROGRAMMING, AND GAME THEORY",
+                                    "9 Hours",
+                                    "Introduction, Integer Programming, Gomory\u2019s Cutting Plane Method, Branch and Bound Method,",
+                                    "Dynamic Programming, Bellman\u2019s Principle of Optimality, Game Theory, Two-Person Zero-Sum",
+                                    "Games, Minimax-Maximin Principle, Saddle Point, Games with Mixed Strategies, Dominance Property,",
+                                    "Graphical Method, LPP Method."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: QUEUING THEORY AND SIMULATION",
+                                    "9 Hours",
+                                    "Introduction, Queuing Models, M/M/1 Model, M/M/c Model, M/G/1 Model, Simulation,",
+                                    "Monte-Carlo Simulation, Simulation of Queuing Systems."
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. S. S. Rao, \u201cEngineering Optimization: Theory and Practice\u201d, 5th Edition, Wiley, 2019.",
+                            "2. H. A. Taha, \u201cOperations Research: An Introduction\u201d, 10th Edition, Pearson, 2017."
+                        ],
+                        "references": [
+                            "1. F. S. Hillier and G. J. Lieberman, \u201cIntroduction to Operations Research\u201d, 11th Edition,",
+                            "2. K. Deb, \u201cOptimization for Engineering Design: Algorithms and Examples\u201d, 2nd Edition, PHI,"
+                        ]
+                    },
+                    "name": "Optimization Techniques",
+                    "category": "Foundation Course L-T-P-C 3-0-0-3",
+                    "prerequisites": "Basic Mathematics CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of data warehousing and data mining.",
+                "CO2: Apply the concepts of data preprocessing, data warehouse and OLAP technology.",
+                "CO3: Apply the concepts of data mining primitives, languages, and system architectures.",
+                "CO4: Understand the concepts of association rule mining, classification, and prediction.",
+                "CO5: Understand the concepts of cluster analysis and outlier detection.",
+                "Kaufmann, 2012.",
+                "2019.",
+                "Tools and Techniques\u201d, 4th Edition, Morgan Kaufmann, 2016.",
+                "--- PAGE 47 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                {
+                    "code": "8CSGC6721",
+                    "details": {
+                        "objectives": [
+                            "1. To understand the basic concepts of data warehousing and data mining.",
+                            "2. To learn the concepts of data preprocessing, data warehouse and OLAP technology.",
+                            "3. To understand the concepts of data mining primitives, languages, and system architectures.",
+                            "4. To learn the concepts of association rule mining, classification, and prediction.",
+                            "5. To understand the concepts of cluster analysis and outlier detection."
+                        ],
+                        "outcomes": [],
+                        "other_content": [
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT I: INTRODUCTION TO DATA WAREHOUSING AND DATA MINING",
+                                    "9 Hours",
+                                    "What is a Data Warehouse?, A Multidimensional Data Model, Data Warehouse Architecture, Data",
+                                    "Warehouse Implementation, From Data Warehousing to Data Mining, What is Data Mining?, Kinds of",
+                                    "Data, Kinds of Patterns, Technologies Used, Kinds of Applications Targeted, Major Issues in Data",
+                                    "Mining."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT II: DATA PREPROCESSING, DATA WAREHOUSE AND OLAP TECHNOLOGY",
+                                    "9 Hours",
+                                    "Data Preprocessing, Data Cleaning, Data Integration, Data Reduction, Data Transformation and Data",
+                                    "Discretization, Data Warehouse and OLAP Technology, An Overview, A Multidimensional Data Model,",
+                                    "Data Warehouse Architecture, Data Warehouse Implementation, From Data Warehousing to Data Mining."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT III: DATA MINING PRIMITIVES, LANGUAGES, AND SYSTEM ARCHITECTURES",
+                                    "9 Hours",
+                                    "Data Mining Primitives, Data Mining Query Language, Designing Graphical User Interfaces Based on a",
+                                    "Data Mining Query Language, Architectures of Data Mining Systems."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT IV: ASSOCIATION RULE MINING, CLASSIFICATION, AND PREDICTION",
+                                    "9 Hours",
+                                    "Association Rule Mining, Mining Single-Dimensional Boolean Association Rules from Transactional",
+                                    "Databases, Mining Multilevel Association Rules from Transactional Databases, Mining Multidimensional",
+                                    "Association Rules from Relational Databases and Data Warehouses, From Association Mining to",
+                                    "Correlation Analysis, Constraint-Based Association Mining, Classification and Prediction, Issues",
+                                    "Regarding Classification and Prediction, Classification by Decision Tree Induction, Bayesian",
+                                    "Classification, Rule-Based Classification, Classification by Backpropagation, Support Vector Machines,",
+                                    "Associative Classification, Lazy Learners, Other Classification Methods, Prediction, Accuracy and Error",
+                                    "Measures, Evaluating the Accuracy of a Classifier or Predictor, Ensemble Methods."
+                                ]
+                            },
+                            {
+                                "title": "Other Content",
+                                "description": [
+                                    "UNIT V: CLUSTER ANALYSIS AND OUTLIER DETECTION",
+                                    "9 Hours",
+                                    "Cluster Analysis, Types of Data in Cluster Analysis, A Categorization of Major Clustering Methods,",
+                                    "Partitioning Methods, Hierarchical Methods, Density-Based Methods, Grid-Based Methods, Model-",
+                                    "Based Clustering Methods, Clustering High-Dimensional Data, Constraint-Based Cluster Analysis,",
+                                    "Outlier Detection, Outlier Detection Methods, Statistical Approaches, Proximity-Based Approaches,",
+                                    "Clustering-Based Approaches, Classification-Based Approaches.",
+                                    "--- PAGE 46 ---",
+                                    "STE 2023-25 School of Science Studies",
+                                    "Master of Computer Applications"
+                                ]
+                            }
+                        ],
+                        "textbooks": [
+                            "1. J. Han, M. Kamber, and J. Pei, \u201cData Mining: Concepts and Techniques\u201d, 3rd Edition, Morgan",
+                            "2. P. N. Tan, M. Steinbach, and V. Kumar, \u201cIntroduction to Data Mining\u201d, 2nd Edition, Pearson,"
+                        ],
+                        "references": [
+                            "1. I. H. Witten, E. Frank, M. A. Hall, and C. J. Pal, \u201cData Mining: Practical Machine Learning",
+                            "2. G. K. Gupta, \u201cIntroduction to Data Mining with Case Studies\u201d, 3rd Edition, PHI, 2014."
+                        ],
+                        "laboratory": [
+                            "1. Write a program to implement data preprocessing.",
+                            "2. Write a program to implement a data warehouse.",
+                            "3. Write a program to implement OLAP operations.",
+                            "4. Write a program to implement Apriori algorithm.",
+                            "5. Write a program to implement FP-growth algorithm.",
+                            "6. Write a program to implement decision tree algorithm.",
+                            "7. Write a program to implement Naive Bayes algorithm.",
+                            "8. Write a program to implement k-means clustering algorithm.",
+                            "9. Write a program to implement k-medoids clustering algorithm.",
+                            "10. Write a program to implement outlier detection."
+                        ]
+                    },
+                    "name": "Data Warehousing & Data Mining and Lab",
+                    "category": "Elective Course L-T-P-C 3-0-2-5",
+                    "prerequisites": "Database Management Systems CIE Marks 50",
+                    "see_marks": "50"
+                },
+                "Upon successful completion of this course, students will be able to:",
+                "CO1: Understand the basic concepts of mobile application development.",
+                "CO2: Apply the concepts of Android and iOS platforms.",
+                "CO3: Apply the concepts of UI design, data storage, and networking.",
+                "CO4: Understand the concepts of location-based services, sensors, and multimedia.",
+                "CO5: Understand the concepts of publishing and distributing mobile applications.",
+                "2017.",
+                "O\u2019Reilly, 2018.",
+                "--- PAGE 48 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "3rd Edition, Big Nerd Ranch Guides, 2017.",
+                "Big Nerd Ranch Guides, 2016.",
+                "--- PAGE 49 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications"
+            ]
+        },
+        {
+            "title": "Glossary",
+            "content": [
+                "--- PAGE 50 ---",
+                "STE 2023-25 School of Science Studies",
+                "Master of Computer Applications",
+                "Term Definition",
+                "ABET Accreditation Board for Engineering and Technology",
+                "AICTE All India Council for Technical Education",
+                "CBCS Choice Based Credit System",
+                "CIE Continuous Internal Evaluation",
+                "CIP Community/Industry-based Project",
+                "CMRU CMR University",
+                "DCCC Department of Common Core Curriculum",
+                "DSE Discipline Specific Elective",
+                "GRC Graduate Requirement Course",
+                "IDE Interdisciplinary Elective",
+                "L-T-P-C Lecture-Tutorial-Practical-Credit",
+                "MDC Multidisciplinary Course",
+                "MOOC Massive Open Online Course",
+                "NAAC National Assessment and Accreditation Council",
+                "NBA National Board of Accreditation",
+                "NCC National Cadet Corps",
+                "NSS National Service Scheme",
+                "PEO Programme Educational Objectives",
+                "PO Programme Outcomes",
+                "PSO Program Specific Outcomes",
+                "SEE Semester End Examination",
+                "SIP Summer Internship Program",
+                "SOE School of Education",
+                "SOA School of Architecture",
+                "SOEC School of Economics & Commerce",
+                "SOET School of Engineering & Technology",
+                "SOLS School of Legal Studies",
+                "SOM School of Management",
+                "SOSS School of Science Studies",
+                "SOSSH School of Social Sciences & Humanities",
+                "SOD School of Design",
+                "STE Scheme of Teaching and Evaluation",
+                "UGC University Grants Commission",
+                "YRC Youth Red Cross",
+                "--- PAGE 51 ---"
+            ]
+        }
+    ]
+}

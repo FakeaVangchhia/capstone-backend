@@ -11,6 +11,8 @@ from .views import (
     AdminUploadView,
     admin_upload_simple,
     test_upload_page,
+    StudyBuddyView,
+    StudyResourcesView,
 )
 
 urlpatterns = [
@@ -29,4 +31,7 @@ urlpatterns = [
     path("admin/upload-simple", admin_upload_simple),
     # Test page
     path("test-upload", test_upload_page),
+    # Study Buddy Features
+    path("study-buddy", StudyBuddyView.as_view()),
+    path("study-resources", StudyResourcesView.as_view()),
 ]

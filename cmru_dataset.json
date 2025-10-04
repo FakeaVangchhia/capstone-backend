@@ -211,5 +211,51 @@
                 ]
             }
         }
+    },
+    "study_support": {
+        "academic_calendar": {
+            "semester_system": "CMR University follows a semester-based academic calendar",
+            "academic_year": "2025-26",
+            "key_dates": "Check university website for specific semester dates and exam schedules"
+        },
+        "library_resources": {
+            "facilities": [
+                "Digital library with online resources",
+                "Research databases and journals",
+                "Group study rooms",
+                "Silent study zones",
+                "Computer lab access",
+                "Printing and scanning facilities"
+            ],
+            "study_tips": [
+                "Book group study rooms in advance",
+                "Use digital resources for research projects",
+                "Take advantage of quiet zones during exam periods",
+                "Librarians are available to help with research"
+            ]
+        },
+        "academic_support_services": {
+            "faculty_mentorship": "Each student is assigned a faculty mentor for academic guidance",
+            "peer_tutoring": "Senior students provide tutoring support for junior students",
+            "study_groups": "Encouraged across all programs for collaborative learning",
+            "office_hours": "Faculty members maintain regular office hours for student consultations"
+        },
+        "exam_preparation": {
+            "assessment_pattern": "Continuous assessment with mid-term and end-term examinations",
+            "study_strategies": [
+                "Regular attendance is crucial for understanding concepts",
+                "Participate actively in class discussions",
+                "Form study groups with classmates",
+                "Utilize faculty office hours for doubt clarification",
+                "Practice previous year question papers",
+                "Maintain consistent study schedule throughout semester"
+            ]
+        },
+        "student_wellness": {
+            "counseling_services": "Professional counseling available for academic and personal support",
+            "stress_management": "Workshops on time management and stress reduction techniques",
+            "peer_support": "Student buddy system for new students",
+            "mental_health": "Resources available for maintaining good mental health during studies"
+        }
     }
 }
